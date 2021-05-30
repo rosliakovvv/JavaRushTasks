@@ -31,5 +31,7 @@ public class Solution {
                 max = array[i];
         }
         return max;
+
+
     }
 }
