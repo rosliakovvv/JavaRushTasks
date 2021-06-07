@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class Sol {
+public class Scr {
     public static void main(String[] args) {
         Map<String, Cat> map = createMap();
         Set<Cat> set = convertMapToSet(map);
@@ -13,20 +13,25 @@ public class Sol {
     }
 
     public static Map<String, Cat> createMap() {
-        Map<String, Cat> cats = new HashMap<>();
-        cats.put("vasika", new Cat("Vasika"));
-        cats.put("muska", new Cat("Muska"));
-        cats.put("murka", new Cat("Murka"));
-        cats.put("barsik", new Cat("Barsik"));
-        cats.put("pushit", new Cat("Pushit"));
-        return cats;
+        HashMap<String, Cat> result = new HashMap<>();
+
+        result.put("васька", new Cat("васька"));
+        result.put("мурка", new Cat("мурка"));
+        result.put("дымка", new Cat("дымка"));
+        result.put("рыжик", new Cat("рыжик"));
+        result.put("серый", new Cat("серый"));
+        result.put("снежок", new Cat("снежок"));
+        result.put("босс", new Cat("босс"));
+        result.put("борис", new Cat("борис"));
+        result.put("барсик", new Cat("барсик"));
+        result.put("гарфи", new Cat("гарфи"));
+
+        return result;
     }
 
     public static Set<Cat> convertMapToSet(Map<String, Cat> map) {
-        Set<Cat> setCats = new HashSet<>();
-        for (Map.Entry<String, Cat> pair : map.entrySet()) {
-            setCats.add(pair.getValue());
-        }
+        Set<Cat> setCats = new HashSet(map.values());
+
         return setCats;
     }
 
@@ -44,7 +49,7 @@ public class Sol {
         }
 
         public String toString() {
-            return "Cat - " + this.name;
+            return "Cat " + this.name;
         }
     }
 }
