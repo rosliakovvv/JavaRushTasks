@@ -10,19 +10,16 @@ public class Sol {
 
     public static Map<String, String> createPeopleMap() {
         Map<String, String> map = new HashMap<>();
-        for (int i = 0; i < 10; i++) {
-            map.put("Petrov", "Oleg");
-            map.put("Ivanov", "Petr");
-            map.put("Petrov", "Oleg");
-            map.put("Ivanov", "Petr");
-            map.put("Petrov", "Oleg");
-
-            map.put("Minin", "Sergey");
-            map.put("Minin", "Sergo");
-            map.put("Minin", "Sergey");
-            map.put("Minin", "Sergey");
-            map.put("Putin", "Lox");
-        }
+        map.put("Petrov", "Oleg");
+        map.put("Ivanov", "Petr");
+        map.put("Petrov", "Svinia");
+        map.put("Ivanov", "Petro");
+        map.put("Petrov", "Chushka");
+        map.put("Minin", "Sergey");
+        map.put("Minin", "Sergo");
+        map.put("Minin", "Pes");
+        map.put("Minin", "Dirik");
+        map.put("Putin", "Lox");
         return map;
     }
 
@@ -32,5 +29,4 @@ public class Sol {
             System.out.println(pair.getKey() + " - " + pair.getValue());
         }
     }
-
 }
