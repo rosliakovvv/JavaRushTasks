@@ -21,12 +21,15 @@ public class Solution {
                 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц',
                 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я');
 
+
         // Ввод строк
         ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < 10; i++) {
             String s = reader.readLine();
             list.add(s.toLowerCase());
         }
+
+
         int[] result = new int[alphabet.size()];
         for (String string:list
              ) {

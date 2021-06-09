@@ -2,7 +2,7 @@ package com.javarush.task.task09.task0928.vov;
 
 import java.io.*;
 
-public class Sol {
+public class Scr {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
@@ -13,8 +13,7 @@ public class Sol {
         OutputStream fileOutputStream = getOutputStream(destinationFileName);
 
         int count = 0;
-        while (fileInputStream.available() > 0)
-        {
+        while (fileInputStream.available() > 0) {
             int data = fileInputStream.read();
             fileOutputStream.write(data);
             count++;
