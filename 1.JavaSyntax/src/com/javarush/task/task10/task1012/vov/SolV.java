@@ -2,46 +2,41 @@ package com.javarush.task.task10.task1012.vov;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
-public class SolCor {
+public class SolV {
     public static void main(String[] args) throws Exception {
-
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        //алфавит
+        // Алфавит
         List<Character> alphabet = Arrays.asList(
                 'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж',
                 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о',
                 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц',
                 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я');
 
-        //ввод строк
-        ArrayList<String> list = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
+        // Ввод строк
+        ArrayList<String> list = new ArrayList<String>();
+        for (int i = 0; i < 4; i++) {
             String line = reader.readLine();
             list.add(line.toLowerCase());
         }
 
-        //подсчет количества букв
         int[] count = new int[alphabet.size()];
-        for (String line : list) {
-            for (char character : line.toCharArray()) {
-                int index = alphabet.indexOf(character);
-                if (index < 0) {
-                    continue;
-                }
 
-                count[index]++;
+        for (String str : list) {
+            char[] charStr = str.toCharArray();
+            for (int i = 0; i < charStr.length; i++) {
+                for (int j = 0; j < alphabet.size(); j++) {
+                    if (alphabet.get(j).equals(charStr[i])) {
+                        count[j]++;
+                    }
+                }
             }
         }
 
-        //вывод результата
         for (int i = 0; i < alphabet.size(); i++) {
-            char character = alphabet.get(i);
-            System.out.println(character + " " + count[i]);
+            System.out.println(alphabet.get(i).toString() + " - " + count[i]);
         }
     }
 }
