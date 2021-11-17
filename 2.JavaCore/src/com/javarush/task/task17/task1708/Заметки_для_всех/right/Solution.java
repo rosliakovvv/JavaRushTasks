@@ -1,5 +1,8 @@
 package com.javarush.task.task17.task1708.Заметки_для_всех.right;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /*
 Заметки для всех
 */

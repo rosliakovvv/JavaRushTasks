@@ -1,6 +1,6 @@
 taskKey="com.javarush.task.task03.task0301"\n\nДелиться полезно
 
-Реализуй метод public static void div(int a, int b).
+Реализуй метод public static void div(int ar, int b).
 Метод должен делить первое число на второе, и выводить на экран результат деления а на b.
 
 На экран должно быть выведено целое число.

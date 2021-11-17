@@ -7,8 +7,8 @@ package com.javarush.task.task15.task1509.Мужчина_или_женщина;
 
 public class Solution {
     public static void main(String[] args) {
-        Woman woman = new Woman();
         Man man = new Man();
+        Woman woman = new Woman();
 
         printName(man);
         printName(woman);
@@ -22,11 +22,11 @@ public class Solution {
 
     }
 
-    public static class Man extends Human {
+    public static class Man extends Human{
 
     }
 
-    public static class Woman extends Human {
+    public static class Woman extends Human{
 
     }
 }

@@ -6,7 +6,7 @@ package com.javarush.task.task15.task1508.ООП_Перегрузка_убира
 
 public class Solution {
     public static void main(String[] args) {
-        print(1);
+        printT(1);
     }
 
     public static void print(byte b) {
@@ -17,7 +17,7 @@ public class Solution {
         System.out.println("Я буду Java прогером!");
     }
 
-    public static void print(long l) {
+    public static void printT(long l) {
         System.out.println("Я буду Java прогером!");
     }
 
