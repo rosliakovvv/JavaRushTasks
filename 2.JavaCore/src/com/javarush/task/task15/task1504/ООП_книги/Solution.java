@@ -1,22 +1,22 @@
 package com.javarush.task.task15.task1504.ООП_книги;
 
+import java.util.LinkedList;
+import java.util.List;
 
 /*
 ООП - книги
 */
 
-import java.util.LinkedList;
-import java.util.List;
-
 public class Solution {
     public static void main(String[] args) {
         List<Book> books = new LinkedList<Book>();
-//        books.add(new MarkTwainBook("Tom Sawyer"));
-//        books.add(new AgathaChristieBook("Hercule Poirot"));
+        books.add(new MarkTwainBook("Tom Sawyer"));
+        books.add(new AgathaChristieBook("Hercule Poirot"));
         System.out.println(books);
     }
 
     abstract static class Book {
+
         private String author;
 
         public Book(String author) {
@@ -34,6 +34,11 @@ public class Solution {
             String output = "output";
             //Add your code here
 
+            if (this instanceof MarkTwainBook) {
+                output = markTwainOutput;
+            } else {
+                output = agathaChristieOutput;
+            }
             return output;
         }
 
@@ -41,11 +46,44 @@ public class Solution {
             return getOutputByBookType();
         }
     }
-//    public static class MarkTwainBook extends Book {
 
+    private static class MarkTwainBook extends Book {
 
+        private String title;
+
+        public MarkTwainBook(String title) {
+            super("Mark Twain");
+            this.title = title;
+        }
+
+        @Override
+        public Book getBook() {
+            return this;
+        }
+
+        @Override
+        public String getTitle() {
+            return title;
+        }
     }
-//    public static class AgathaChristieBook extends Book {
 
-//    }
-//}
+    private static class AgathaChristieBook extends Book {
+
+        private String title;
+
+        public AgathaChristieBook(String title) {
+            super("Agatha Christie");
+            this.title = title;
+        }
+
+        @Override
+        public Book getBook() {
+            return this;
+        }
+
+        @Override
+        public String getTitle() {
+            return title;
+        }
+    }
+}

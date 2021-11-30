@@ -1,12 +1,13 @@
 package com.javarush.task.task22.task2201.Строки_нитей.right;
 
+
 /*
 Строки нитей или строковые нити? Вот в чем вопрос
 */
+
 public class Solution {
     public static void main(String[] args) {
-
-                new Solution();
+        new Solution();
     }
 
     public static final String FIRST_THREAD_NAME = "1#";
@@ -33,15 +34,14 @@ public class Solution {
     }
 
     public synchronized String getPartOfString(String string, String threadName) {
-
         try {
-            int index1 = string.indexOf("\t") + 1;
-            int index2 = string.indexOf("\t", index1);
-            return string.substring(index1, index2);
-        } catch (StringIndexOutOfBoundsException e) {
-            if (threadName == Solution.FIRST_THREAD_NAME) throw new StringForFirstThreadTooShortException();
-            else if (threadName == Solution.SECOND_THREAD_NAME) throw new StringForSecondThreadTooShortException();
-            else throw new RuntimeException();
+            return string.substring(string.indexOf('\t') + 1, string.lastIndexOf('\t'));
+        } catch (Throwable e) {
+            if (FIRST_THREAD_NAME.equals(threadName)) {
+                throw new StringForFirstThreadTooShortException(e);
+            } else if (SECOND_THREAD_NAME.equals(threadName)) {
+                throw new StringForSecondThreadTooShortException(e);
+            } else throw new RuntimeException(e);
         }
     }
 }

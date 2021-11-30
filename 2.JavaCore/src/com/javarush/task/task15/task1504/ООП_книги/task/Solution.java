@@ -1,20 +1,16 @@
 package com.javarush.task.task15.task1504.ООП_книги.task;
 
 
-/*
-ООП - книги
-*/
-
 import java.util.LinkedList;
 import java.util.List;
 
+/*
+ООП - книги
+*/
+/*
+
 public class Solution {
     public static void main(String[] args) {
-
-        // не компилится
-
-        /*
-
         List<Book> books = new LinkedList<Book>();
         books.add(new MarkTwainBook("Tom Sawyer"));
         books.add(new AgathaChristieBook("Hercule Poirot"));
@@ -45,6 +41,8 @@ public class Solution {
         public String toString() {
             return getOutputByBookType();
         }
-        */
     }
 }
+
+
+*/

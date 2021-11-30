@@ -5,17 +5,18 @@ package com.javarush.task.task15.task1518;
 */
 
 public class Solution {
-    public static class Cat{
-        public String name;
-    }
     public static Cat cat;
-static {
-    Cat cat1 = new Cat();
-    cat = cat1;
-    cat1.name = "Какой-то кот";
-    System.out.println(cat1.name);
-}
+
+    static {
+        Solution.cat = new Cat();
+        System.out.println(cat.name = "Черчиль");
+    }
+
     public static void main(String[] args) {
 
+    }
+
+    public static class Cat {
+        public String name;
     }
 }

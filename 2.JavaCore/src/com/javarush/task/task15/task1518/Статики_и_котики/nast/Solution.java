@@ -9,12 +9,12 @@ public class Solution {
         public String name;
     }
     public static Cat cat;
-static {
-    Cat cat1 = new Cat();
-    cat = cat1;
-    cat1.name = "Какой-то кот";
-    System.out.println(cat1.name);
-}
+    static {
+        Cat cat1 = new Cat();
+        cat = cat1;
+        cat1.name = "Какой-то кот";
+        System.out.println(cat1.name);
+    }
     public static void main(String[] args) {
 
     }

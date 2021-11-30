@@ -1,12 +1,11 @@
-package com.javarush.task.task15.task1520;
+package com.javarush.task.task15.task1520.Тренировка_мозга.nast;
 
-/* 
+/*
 Тренировка мозга
 */
 
 public class Solution {
     public static void main(String[] args) {
-
         Duck duck = new Duck();
         Util.fly(duck);
         Util.move(duck);
@@ -34,11 +33,11 @@ public class Solution {
         }
     }
 
-    public interface CanFly {
+    public static interface CanFly {
         void doAction();
     }
 
-    public interface CanMove {
+    public static interface CanMove {
         void doAnotherAction();
     }
 }

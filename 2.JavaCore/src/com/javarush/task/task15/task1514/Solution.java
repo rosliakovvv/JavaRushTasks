@@ -9,12 +9,18 @@ import java.util.Map;
 
 public class Solution {
     public static Map<Double, String> labels = new HashMap<Double, String>();
+
     static {
-        for (double i = 0; i <5 ; i++) {
-            labels.put(i, "labels" + i);
-        }
+        labels.put(1.0, "Vov");
+        labels.put(2d, "Ivan");
+        labels.put(3d, "Alex");
+        labels.put(4d, "Rus");
+        labels.put(5d, "Ant");
     }
+
     public static void main(String[] args) {
         System.out.println(labels);
+
+
     }
 }
