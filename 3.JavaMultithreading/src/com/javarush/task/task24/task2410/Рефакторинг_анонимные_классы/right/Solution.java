@@ -1,6 +1,5 @@
 package com.javarush.task.task24.task2410.Рефакторинг_анонимные_классы.right;
 
-
 import java.util.LinkedList;
 import java.util.List;
 
