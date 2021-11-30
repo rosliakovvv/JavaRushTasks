@@ -10,7 +10,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 
 /*
-public class Solution {
+public class Room {
     public static final ThreadLocalRandom RANDOM = ThreadLocalRandom.current();
 
     public static void main(String[] args) {

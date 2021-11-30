@@ -1,6 +1,5 @@
 package com.javarush.task.task22.task2207.Обращенные_слова.right;
 
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.InputStreamReader;

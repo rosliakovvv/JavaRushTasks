@@ -16,25 +16,25 @@ import java.util.List;
 
 
 /*
-public class Solution {
+public class Room {
     public static final String DEFAULT_FILE_NAME = "C:/tmp/strange_file_name.tmp";
 
     private final String localFileName;
     private List<String> contentAsLines;
     private boolean fileLoaded;
 
-    public Solution(String firstFileName) {
+    public Room(String firstFileName) {
         localFileName = firstFileName == null ? DEFAULT_FILE_NAME : firstFileName;
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        String fileName = Solution.class.getResource("Solution.java").getPath();
+        String fileName = Room.class.getResource("Room.java").getPath();
 
-        Solution solution = new Solution(fileName);
+        Room solution = new Room(fileName);
         solution.downloadFileContent();
         if (solution.isFileLoaded()) {
-            System.out.println(solution.hasExpectedLine("public class Solution {"));   //expected true
-            System.out.println(solution.hasExpectedLine(" public class Solution {"));  //expected false
+            System.out.println(solution.hasExpectedLine("public class Room {"));   //expected true
+            System.out.println(solution.hasExpectedLine(" public class Room {"));  //expected false
         }
     }
 

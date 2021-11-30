@@ -12,9 +12,9 @@ import java.nio.file.Paths;
 */
 
 /*
-public class Solution {
+public class Room {
     public static void main(String[] args) throws IOException, InterruptedException, URISyntaxException {
-        Solution solution = new Solution();
+        Room solution = new Room();
         String nameOfFileToBeOpenedByNotepad = solution.getAbsolutePathToDefaultTxtFile().toString();
         Process notepad = solution.getStartNotepadProcess(nameOfFileToBeOpenedByNotepad);
         notepad.waitFor();
@@ -26,7 +26,7 @@ public class Solution {
     }
 
     public Path getAbsolutePathToDefaultTxtFile() throws URISyntaxException {
-        URI uri = Solution.class.getResource("file.txt").toURI();
+        URI uri = Room.class.getResource("file.txt").toURI();
         return Paths.get(uri);
     }
 }

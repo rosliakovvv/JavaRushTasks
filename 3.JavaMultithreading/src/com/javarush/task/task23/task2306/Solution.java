@@ -27,12 +27,12 @@ public class Solution {
     private class SuperUser {
         private String name;
 
-        //доступ к этому методу возможен только внутри класса Solution, т.к. модификатор иннер класса private
+        //доступ к этому методу возможен только внутри класса Room, т.к. модификатор иннер класса private
         public SuperUser(String name) {
             this.name = name;
         }
 
-        //доступ к этому методу возможен только внутри класса Solution, т.к. модификатор иннер класса private
+        //доступ к этому методу возможен только внутри класса Room, т.к. модификатор иннер класса private
         public String getDescription() {
             return String.format("My name is %s. I'm from %s in %s.", this.name, city, country);
         }
@@ -40,7 +40,7 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution("the United States", "Seattle");
-        //внутри класса Solution (а сейчас мы внутри) к методу getDescription можно обращаться обоими способами
+        //внутри класса Room (а сейчас мы внутри) к методу getDescription можно обращаться обоими способами
         System.out.println(solution.getTrickyUser("George").getDescription());
         //а из любого другого внешнего класса только так:
         System.out.println(solution.getUserDescription("George"));

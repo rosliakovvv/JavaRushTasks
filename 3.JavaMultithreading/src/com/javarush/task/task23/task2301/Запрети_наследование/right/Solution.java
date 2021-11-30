@@ -1,6 +1,5 @@
 package com.javarush.task.task23.task2301.Запрети_наследование.right;
 
-
 /*
 Запрети наследование
 */
