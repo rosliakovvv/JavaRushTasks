@@ -1,5 +1,6 @@
 package com.javarush.task.task27.task2701.Избавляемся_от_меток.right;
 
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
