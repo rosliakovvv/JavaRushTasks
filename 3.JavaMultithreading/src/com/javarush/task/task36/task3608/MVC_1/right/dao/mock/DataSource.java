@@ -1,6 +1,6 @@
 package com.javarush.task.task36.task3608.MVC_1.right.dao.mock;
 
-import com.javarush.task.task36.task3608.MVC_1.right.bean.User;
+import com.javarush.task.task36.task3608.bean.User;
 
 import java.util.LinkedList;
 import java.util.List;

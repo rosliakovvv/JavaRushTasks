@@ -1,7 +1,7 @@
 package com.javarush.task.task36.task3608.MVC_1.right.dao;
 
-import com.javarush.task.task36.task3608.MVC_1.right.bean.User;
-import com.javarush.task.task36.task3608.MVC_1.right.dao.mock.DataSource;
+import com.javarush.task.task36.task3608.bean.User;
+import com.javarush.task.task36.task3608.dao.mock.DataSource;
 
 import java.util.ArrayList;
 import java.util.List;
