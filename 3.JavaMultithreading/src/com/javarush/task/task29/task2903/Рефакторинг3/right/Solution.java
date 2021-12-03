@@ -1,16 +1,14 @@
 package com.javarush.task.task29.task2903.Рефакторинг3.right;
-/*
+
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.ThreadLocalRandom;
-*/
+
 /*
 И еще раз рефакторинг Ӏ Java Multithreading: 9 уровень, 5 лекция
 */
 
-
-/*
-public class Room {
+public class Solution {
     public static final ThreadLocalRandom RANDOM = ThreadLocalRandom.current();
 
     public static void main(String[] args) {
@@ -38,7 +36,7 @@ public class Room {
                 String text = name + " вставил запись для " + randomInt;
 
                 // previousEntry is null for new entries
-                /* Instead of setting it to null, call concurrentMap.someMethod(randomInt, text) *//*
+                /* Instead of setting it to null, call concurrentMap.someMethod(randomInt, text) */
                 String previousEntry = concurrentMap.putIfAbsent(randomInt, text);
 
 
@@ -51,4 +49,3 @@ public class Room {
         };
     }
 }
-*/

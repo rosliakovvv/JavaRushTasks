@@ -1,20 +1,18 @@
 package com.javarush.task.task29.task2902.Рефакторинг2.right;
-/*
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-*/
 
 /*
 Рефакторинг в соответствии с Naming and Code Convention 2
 */
 
-/*
-public class Room {
+public class Solution {
     public static void main(String[] args) throws IOException, InterruptedException, URISyntaxException {
-        Room solution = new Room();
+        Solution solution = new Solution();
         String nameOfFileToBeOpenedByNotepad = solution.getAbsolutePathToDefaultTxtFile().toString();
         Process notepad = solution.getStartNotepadProcess(nameOfFileToBeOpenedByNotepad);
         notepad.waitFor();
@@ -26,8 +24,7 @@ public class Room {
     }
 
     public Path getAbsolutePathToDefaultTxtFile() throws URISyntaxException {
-        URI uri = Room.class.getResource("file.txt").toURI();
+        URI uri = Solution.class.getResource("file.txt").toURI();
         return Paths.get(uri);
     }
 }
-*/
