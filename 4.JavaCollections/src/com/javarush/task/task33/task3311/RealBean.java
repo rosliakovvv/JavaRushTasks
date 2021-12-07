@@ -28,7 +28,7 @@ public class RealBean {
         return name;
     }
 
-@JsonAnyGetter
+    @JsonAnyGetter
     public Map<String, Object> getAdditionalMap() {
         return additionalMap;
     }

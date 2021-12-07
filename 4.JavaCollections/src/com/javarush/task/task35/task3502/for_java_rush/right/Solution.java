@@ -1,4 +1,16 @@
 package com.javarush.task.task35.task3502.for_java_rush.right;
 
-public class Solution {
+import java.util.List;
+
+/*
+Знакомство с дженериками
+*/
+
+public class Solution<T extends List<Solution.SomeClass>> {
+    public static class SomeClass<K extends Number> {
+    }
+
+    public static void main(String[] args) {
+
+    }
 }

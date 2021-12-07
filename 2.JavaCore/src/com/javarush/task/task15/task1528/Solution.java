@@ -1,7 +1,7 @@
 package com.javarush.task.task15.task1528;
 
 /* 
-ООП. Hrivna — тоже деньги
+ООП. Hryvnia — тоже деньги
 */
 
 public class Solution {
