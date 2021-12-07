@@ -1,0 +1,25 @@
+package com.javarush.task.task26.task2613.CashMachine_12.right.command;
+
+import com.javarush.task.task26.task2613.CashMachine_10.right.ConsoleHelper;
+import com.javarush.task.task26.task2613.CashMachine_10.right.CurrencyManipulator;
+import com.javarush.task.task26.task2613.CashMachine_10.right.CurrencyManipulatorFactory;
+import com.javarush.task.task26.task2613.CashMachine_11.right.command.Command;
+
+class InfoCommand implements com.javarush.task.task26.task2613.CashMachine_11.right.command.Command {
+
+    @Override
+    public void execute() {
+        ConsoleHelper.writeMessage("Information:");
+        boolean hasMoney = false;
+        for (CurrencyManipulator manipulator : CurrencyManipulatorFactory.getAllCurrencyManipulators()) {
+            if (manipulator.hasMoney()) {
+                hasMoney = true;
+                ConsoleHelper.writeMessage("\t" + manipulator.getCurrencyCode() + " - " + manipulator.getTotalAmount());
+            }
+        }
+
+        if (!hasMoney) {
+            ConsoleHelper.writeMessage("No money available.");
+        }
+    }
+}
