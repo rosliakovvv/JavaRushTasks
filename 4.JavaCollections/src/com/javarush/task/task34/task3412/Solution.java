@@ -17,7 +17,7 @@ public class Solution {
     private Date value3;
 
     public Solution(int value1, String value2, Date value3) {
-        logger.debug("Constructor Solution");
+        logger.debug("Constructor Space");
         this.value1 = value1;
         this.value2 = value2;
         this.value3 = value3;

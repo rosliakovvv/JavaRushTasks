@@ -9,7 +9,7 @@ MVC - простая версия
 
 public class Solution {
     public static void main(String[] args) {
-       // new Solution().fireShowDataEvent();
+       // new Space().fireShowDataEvent();
         View view = new View();
         view.fireShowDataEvent();
     }

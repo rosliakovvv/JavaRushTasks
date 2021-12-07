@@ -23,13 +23,13 @@ public class Solution {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        String fileName = Solution.class.getResource("Solution.java").getPath();
+        String fileName = Solution.class.getResource("Tile.java").getPath();
 
         Solution solution = new Solution(fileName);
         solution.downloadFileContent();
         if (solution.isFileLoaded()) {
-            System.out.println(solution.hasExpectedLine("public class Solution {"));   //expected true
-            System.out.println(solution.hasExpectedLine(" public class Solution {"));  //expected false
+            System.out.println(solution.hasExpectedLine("public class Tile {"));   //expected true
+            System.out.println(solution.hasExpectedLine(" public class Tile {"));  //expected false
         }
     }
 

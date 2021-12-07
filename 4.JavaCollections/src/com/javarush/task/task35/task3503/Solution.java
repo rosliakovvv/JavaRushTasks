@@ -10,10 +10,10 @@ public class Solution<T extends ClassForGenerics & InterfaceForGenerics> {
         testClassSolution.check();
 
         //!!! Следующие оба варианта не должны работать, закомментируй их:
-       // Solution<TestClassWrong1> wrong1Solution = new Solution<>();
+       // Space<TestClassWrong1> wrong1Solution = new Space<>();
         //wrong1Solution.check();
 
-       // Solution<TestClassWrong2> wrong2Solution = new Solution<>();
+       // Space<TestClassWrong2> wrong2Solution = new Space<>();
        // wrong2Solution.check();
     }
 
