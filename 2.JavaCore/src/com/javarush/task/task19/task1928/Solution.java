@@ -10,13 +10,13 @@ import java.io.InputStream;
 
 public class Solution {
     {
-        System.out.println("This is the Solution class");
+        System.out.println("This is the Solution_old class");
     }
 
     public static void main(String... args) throws IOException {
         /*try (
                 *//*FileOutputStream outputStream = new FileOutputStream(args[0]);//args[0]
-                InputStream is = Solution.class.getClassLoader().getResourceAsStream(args[1])*//*
+                InputStream is = Solution_old.class.getClassLoader().getResourceAsStream(args[1])*//*
         ) {*/
 
             /*byte[] b = new byte[is.available()];

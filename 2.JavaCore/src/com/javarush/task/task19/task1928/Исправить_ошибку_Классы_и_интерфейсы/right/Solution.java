@@ -10,7 +10,7 @@ import java.io.InputStream;
 
 public class Solution {
     {
-        System.out.println("This is the Solution class");
+        System.out.println("This is the Solution_old class");
     }
 
     public static void main(String... args) throws IOException {

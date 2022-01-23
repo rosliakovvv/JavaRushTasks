@@ -19,10 +19,10 @@ public class Solution implements Serializable{
             tmp.node = i + 1;
             solution.edges.add(tmp);
         }
-        System.out.println("Solution # "+ solution.node);
+        System.out.println("Solution_old # "+ solution.node);
         for (Solution sol:solution.edges
              ) {
-            System.out.println("Solution # "+ sol.node);
+            System.out.println("Solution_old # "+ sol.node);
         }
         ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("FileTest"));
         out.writeObject(solution);
@@ -31,10 +31,10 @@ public class Solution implements Serializable{
         Solution solution1 = (Solution) in.readObject();
         in.close();
         System.out.println("==============");
-        System.out.println("Solution # "+ solution.node);
+        System.out.println("Solution_old # "+ solution.node);
         for (Solution sol:solution.edges
                 ) {
-            System.out.println("Solution # "+ sol.node);
+            System.out.println("Solution_old # "+ sol.node);
         }
 
     }

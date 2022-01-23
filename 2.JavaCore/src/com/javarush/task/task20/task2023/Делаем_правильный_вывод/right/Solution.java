@@ -4,7 +4,7 @@ package com.javarush.task.task20.task2023.Делаем_правильный_вы
 Делаем правильный вывод
 */
 //
-//public class Solution {
+//public class Solution_old {
 //    public static void main(String[] s) {
 //        A aNew = new C();
 //        aNew.method2();

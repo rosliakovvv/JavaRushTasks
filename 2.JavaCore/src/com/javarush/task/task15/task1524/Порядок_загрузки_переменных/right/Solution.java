@@ -19,7 +19,7 @@ public class Solution {
     public String name = "First name";
 
     public Solution() {
-        System.out.println("Solution constructor");
+        System.out.println("Solution_old constructor");
         printAllFields(this);
     }
 

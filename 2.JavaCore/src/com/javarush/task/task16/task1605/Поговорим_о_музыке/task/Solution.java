@@ -7,7 +7,7 @@ import java.util.Date;
 */
 /*
 
-public class Solution {
+public class Solution_old {
     public static int delay = 1000;
 
     public static void main(String[] args) {

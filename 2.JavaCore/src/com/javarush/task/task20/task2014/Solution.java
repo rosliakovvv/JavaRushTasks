@@ -5,11 +5,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /* 
-Serializable Solution
+Serializable Solution_old
 */
 public class Solution implements Serializable{
     public static void main(String[] args) {
-       // System.out.println(new Solution(4));
+       // System.out.println(new Solution_old(4));
         String fileName = "FileTest";
         try (FileInputStream fileInputStream = new FileInputStream(fileName);
              FileOutputStream fileOutputStream = new FileOutputStream(fileName)){

@@ -9,7 +9,7 @@ import java.util.List;
 */
 /*
 
-public class Solution {
+public class Solution_old {
     public static void main(String[] args) {
         List<Book> books = new LinkedList<Book>();
         books.add(new MarkTwainBook("Tom Sawyer"));

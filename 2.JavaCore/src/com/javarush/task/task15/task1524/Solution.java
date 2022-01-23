@@ -24,7 +24,7 @@ public class Solution {
 
 
     public Solution() {
-        System.out.println("Solution constructor");
+        System.out.println("Solution_old constructor");
         printAllFields(this);
     }
 

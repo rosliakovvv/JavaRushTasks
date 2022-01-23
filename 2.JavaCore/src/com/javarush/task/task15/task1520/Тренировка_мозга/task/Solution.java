@@ -5,7 +5,7 @@ package com.javarush.task.task15.task1520.Тренировка_мозга.task;
 */
 /*
 
-public class Solution {
+public class Solution_old {
     public static void main(String[] args) {
         Duck duck = new Duck();
         Util.fly(duck);

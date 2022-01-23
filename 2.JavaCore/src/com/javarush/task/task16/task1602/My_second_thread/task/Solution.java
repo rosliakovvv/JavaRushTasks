@@ -5,7 +5,7 @@ My second thread
 */
 
 /*
-public class Solution {
+public class Solution_old {
     public static void main(String[] args) {
         TestThread thread = new TestThread();
         thread.start();

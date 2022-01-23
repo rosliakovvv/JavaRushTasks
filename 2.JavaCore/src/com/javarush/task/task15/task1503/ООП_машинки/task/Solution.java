@@ -10,10 +10,10 @@ public class Solution {
         // не компилируеммый код
 
         /*
-        new Solution.LuxuriousCar().printlnDesire();
-        new Solution.CheapCar().printlnDesire();
-        new Solution.Ferrari().printlnDesire();
-        new Solution.Lanos().printlnDesire();
+        new Solution_old.LuxuriousCar().printlnDesire();
+        new Solution_old.CheapCar().printlnDesire();
+        new Solution_old.Ferrari().printlnDesire();
+        new Solution_old.Lanos().printlnDesire();
     }
 
     public static class Ferrari {

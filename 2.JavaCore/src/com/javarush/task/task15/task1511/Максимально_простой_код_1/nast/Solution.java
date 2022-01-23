@@ -7,7 +7,7 @@ import java.io.Serializable;
 */
 
 /*
-public class Solution {
+public class Solution_old {
     public static void main(String[] args) {
         JuniorJavaDev me = new JuniorJavaDev();
         System.out.println(me.askHubert("What do you think about com.javarush.task.task15.task1511?"));
