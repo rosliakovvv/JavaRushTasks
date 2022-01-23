@@ -1,6 +1,5 @@
 package com.javarush.task.task16.task1607.Horse_Racing.right;
 
-
 import java.util.ArrayList;
 import java.util.List;
 

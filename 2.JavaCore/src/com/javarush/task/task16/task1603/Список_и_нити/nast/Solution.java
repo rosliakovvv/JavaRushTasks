@@ -1,4 +1,4 @@
-package com.javarush.task.task16.task1603;
+package com.javarush.task.task16.task1603.Список_и_нити.nast;
 
 import java.util.ArrayList;
 import java.util.List;

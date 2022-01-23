@@ -1,6 +1,5 @@
 package com.javarush.task.task16.task1605.Поговорим_о_музыке.right;
 
-
 import java.util.Date;
 
 /*

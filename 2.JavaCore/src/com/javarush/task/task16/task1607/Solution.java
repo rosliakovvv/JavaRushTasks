@@ -7,6 +7,7 @@ import java.util.List;
 Horse Racing
 */
 
+//Решение Н
 public class Solution {
 
     public static void main(String[] args) throws InterruptedException {

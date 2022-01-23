@@ -1,12 +1,12 @@
 package com.javarush.task.task16.task1605;
 
-import javax.xml.crypto.Data;
-import java.util.Date;
-
 /* 
 Поговорим о музыке
 */
 
+import java.util.Date;
+
+//это решение Н
 public class Solution {
     public static int delay = 1000;
 
@@ -46,10 +46,10 @@ public class Solution {
             return new Date();
         }
         public void run(){
-            Date stsrtTime = startPlaying();
+            Date startTime = startPlaying();
             sleepNSeconds(1);
             Date stopTime = stopPlaying();
-            long time = stopTime.getTime() - stsrtTime.getTime();
+            long time = stopTime.getTime() - startTime.getTime();
             System.out.println(String.format("Playing %s ms",time));
         }
     }
