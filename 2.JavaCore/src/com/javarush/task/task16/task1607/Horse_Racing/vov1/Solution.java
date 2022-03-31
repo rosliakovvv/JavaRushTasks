@@ -1,4 +1,4 @@
-package com.javarush.task.task16.task1607.Horse_Racing.vov_1;
+package com.javarush.task.task16.task1607.Horse_Racing.vov1;
 
 import java.util.ArrayList;
 import java.util.List;
