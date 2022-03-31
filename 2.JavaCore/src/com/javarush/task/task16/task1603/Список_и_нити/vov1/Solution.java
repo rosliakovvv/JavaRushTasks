@@ -1,4 +1,4 @@
-package com.javarush.task.task16.task1603.Список_и_нити.vov_1;
+package com.javarush.task.task16.task1603.Список_и_нити.vov1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +33,7 @@ public class Solution {
 
     public static class SpecialThread implements Runnable {
         public void run() {
-            System.out.println("it's a run method inside SpecialThread");
+            System.out.println("it's a run method inside SpecialThread_v4");
         }
     }
 }

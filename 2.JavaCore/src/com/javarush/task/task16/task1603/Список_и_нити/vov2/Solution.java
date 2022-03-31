@@ -21,7 +21,7 @@ public class Solution {
 
     public static class SpecialThread implements Runnable {
         public void run() {
-            System.out.println("it's a run method inside SpecialThread");
+            System.out.println("it's a run method inside SpecialThread_v4");
         }
     }
 }

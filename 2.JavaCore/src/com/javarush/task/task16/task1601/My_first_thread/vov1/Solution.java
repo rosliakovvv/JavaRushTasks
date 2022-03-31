@@ -1,4 +1,4 @@
-package com.javarush.task.task16.task1601.My_first_thread.vov_1;
+package com.javarush.task.task16.task1601.My_first_thread.vov1;
 
 public class Solution {
     public static void main(String[] args) {

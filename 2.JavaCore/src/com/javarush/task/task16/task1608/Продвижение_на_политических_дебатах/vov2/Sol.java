@@ -1,38 +1,29 @@
 package com.javarush.task.task16.task1608.Продвижение_на_политических_дебатах.vov2;
 
-// вар1 - расставить приоритеты
-// вар2 - ограничить время в конструкторе (так можно еще точнее контролировать количестве)
-// надо остановить потоки
+// 1 вар - расставить приоритеты
+// 2 вар - ограничить время в конструкторе (так можно еще точнее контролировать количестве)
 
 public class Sol {
     public static int totalSpeech = 200; // Количество выступлений
     public static int utterancesPerSpeech = 1000000; // Количество высказываний в выступлении
+    public static boolean isSpeach = true;
 
     public static void main(String[] args) throws InterruptedException {
         Politican ivanova = new Politican("Иванова");
-//        ivanova.join(350); // Тут ограничиваем время чтобы остальные могли тоже говорить
-//        ivanova.setPriority(Thread.MAX_PRIORITY);
         Politican petrova = new Politican("Петрова");
-//        petrova.setPriority(6);
         Politican sidorova = new Politican("Сидорова");
-//        sidorova.setPriority(4);
 
         while (petrova.getSpeechCount() + sidorova.getSpeechCount() + ivanova.getSpeechCount() < totalSpeech) {
         }
-
-        // TODO: 23.01.2022 - Надо как то остановить потоки!
-
-//        petrova.stop();
-//        ivanova.stop();
-//        sidorova.interrupt();
+        isSpeach = false;
 
         System.out.println(ivanova);
         System.out.println(petrova);
         System.out.println(sidorova);
 
         Thread.sleep(1000);
-        System.out.println();
 
+        System.out.println("\n  проверка:");
         System.out.println(ivanova);
         System.out.println(petrova);
         System.out.println(sidorova);
@@ -46,7 +37,7 @@ public class Sol {
             start();
 
             if (name.equals("Иванова")) {
-
+//                setPriority(MAX_PRIORITY); // Первый менее точный вариант:
                 join(500);
             }
 
@@ -63,6 +54,7 @@ public class Sol {
         public void run() {
             while (utteranceCount < totalSpeech * utterancesPerSpeech) {
                 utteranceCount++;
+                if (!isSpeach) return;
             }
         }
 

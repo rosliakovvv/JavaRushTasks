@@ -1,16 +1,15 @@
-package com.javarush.task.task16.task1605.Поговорим_о_музыке.vov_1;
-
-import java.util.Date;
+package com.javarush.task.task16.task1605.Поговорим_о_музыке.vov3;
 
 /*
 Поговорим о музыке
 */
 
-public class Solution {
+import java.util.Date;
+
+public class Sol3 {
     public static int delay = 1000;
 
     public static void main(String[] args) {
-
         Thread violin = new Thread(new Violin("Player"));
         violin.start();
     }
@@ -23,37 +22,37 @@ public class Solution {
         }
     }
 
-    public interface MusicalInstrument extends Runnable {
-        Date startPlaying();
-        Date stopPlaying();
+    public interface MusicalInstrument_v3 extends Runnable {
+        Date startPlaying_v3();
+
+        Date stopPlaying_v3();
     }
 
-    public static class Violin implements MusicalInstrument {
+    public static class Violin implements MusicalInstrument_v3{
         private String owner;
 
         public Violin(String owner) {
             this.owner = owner;
         }
 
-        public Date startPlaying() {
+        public Date startPlaying_v3() {
             System.out.println(this.owner + " is starting to play");
             return new Date();
         }
 
-        public Date stopPlaying() {
+        public Date stopPlaying_v3() {
             System.out.println(this.owner + " is stopping playing");
             return new Date();
         }
 
         @Override
         public void run() {
-            long startTime = startPlaying().getTime();
+            Date startTime = startPlaying_v3();
             sleepNSeconds(1);
-            long stopTime = stopPlaying().getTime();
+            Date stopTime = stopPlaying_v3();
+            System.out.println(stopTime.getTime() - startTime.getTime());
 
-            long playTime = stopTime - startTime;
-
-            System.out.println("Playing " + playTime + " ms");
         }
     }
 }
+
