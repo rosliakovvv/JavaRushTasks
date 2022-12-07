@@ -4,6 +4,7 @@ package com.javarush.task.task16.task1608.Продвижение_на_полит
 Продвижение на политических дебатах
 */
 
+//hello
 public class Solution {
     public static int totalSpeechCount = 200; // столько выступлений (подходов к микрофону)
     public static int utterancesPerSpeech = 1000000; // столько высказываний в одном выступлении

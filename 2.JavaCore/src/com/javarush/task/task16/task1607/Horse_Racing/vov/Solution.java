@@ -1,4 +1,4 @@
-package com.javarush.task.task16.task1607.Horse_Racing.right;
+package com.javarush.task.task16.task1607.Horse_Racing.vov;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,12 +12,16 @@ public class Solution {
     public static void main(String[] args) throws InterruptedException {
         List<Horse> horses = prepareHorsesAndStart(10);
 
+        // Пока не равно, выполнять этот метод
+        // Этот цикл не дает главной нити идти дальше
         while (calculateHorsesFinished(horses) != horses.size()) {
+
         }
     }
 
     public static int calculateHorsesFinished(List<Horse> horses) throws InterruptedException {
         int finishedCount = 0;
+        //напишите тут ваш код
         for (Horse horse : horses) {
             if (horse.isFinished()) {
                 finishedCount++;
@@ -26,12 +30,16 @@ public class Solution {
                 horse.join();
             }
         }
+
+        // TODO: 07.12.2022 синхронизировать эти потоки чтобы не проскакивала ошибка
+        System.out.println(finishedCount);
         return finishedCount;
     }
 
     public static List<Horse> prepareHorsesAndStart(int horseCount) {
         List<Horse> horses = new ArrayList<>(horseCount);
         String number;
+        // "Красивая нумуреация"
         for (int i = 1; i < horseCount + 1; i++) {
             number = i < 10 ? ("0" + i) : "" + i;
             horses.add(new Horse("Horse_" + number));
@@ -59,12 +67,12 @@ class Horse extends Thread {
 
     public void run() {
         String s = "";
-        for (int i = 0; i < 1001; i++) {   // Задержка
+        for (int i = 0; i < 1001; i++) {   // Delay
             s += "" + i;
             if (i == 1000) {
-                isFinished = true;
                 s = " has finished the race!";
                 System.out.println(getName() + s);
+                isFinished = true;
             }
         }
     }

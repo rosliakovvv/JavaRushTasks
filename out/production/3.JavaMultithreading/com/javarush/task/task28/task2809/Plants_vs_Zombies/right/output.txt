@@ -18,4 +18,4 @@ Zombie #2 умер
 Plant #2 умер
 Plant #1 умер
 Zombie #3 умер
-Zombie #1 умер
+Zombie #1 умерр
