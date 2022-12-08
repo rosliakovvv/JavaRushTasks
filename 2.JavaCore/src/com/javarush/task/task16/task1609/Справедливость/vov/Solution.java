@@ -1,4 +1,4 @@
-package com.javarush.task.task16.task1609.Справедливость.vov_1;
+package com.javarush.task.task16.task1609.Справедливость.vov;
 
 /*
 Справедливость
@@ -9,7 +9,6 @@ public class Solution {
         Mouse alpha = new Mouse("#1");
         alpha.join();
         Mouse mouse1 = new Mouse("#2");
-        mouse1.join();
         Mouse mouse2 = new Mouse("#3");
     }
 
