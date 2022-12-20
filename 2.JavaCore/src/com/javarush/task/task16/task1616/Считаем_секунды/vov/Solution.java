@@ -4,30 +4,24 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+// Считаем
 public class Solution {
-
     public static void main(String[] args) throws IOException {
-
         InputStreamReader in = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(in);
-
         Stopwatch stopwatch = new Stopwatch();
         stopwatch.start();
-
         reader.readLine();
         stopwatch.interrupt();
-
         in.close();
         reader.close();
     }
 
     public static class Stopwatch extends Thread {
-
         private int seconds;
 
         @Override
         public void run() {
-
             try {
                 while (!isInterrupted()) {
                     seconds++;
