@@ -1,14 +1,10 @@
 package com.javarush.task.task16.task1616.Считаем_секунды.right;
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/*
-Считаем секунды
-*/
-
+// Считаем секунды
 public class Solution {
     public static void main(String[] args) throws IOException {
         InputStreamReader in = new InputStreamReader(System.in);
@@ -24,12 +20,14 @@ public class Solution {
         in.close();
     }
 
+
+
     public static class Stopwatch extends Thread {
         private int seconds;
 
         public void run() {
             try {
-                while (!isInterrupted()){
+                while (!isInterrupted()) {
                     seconds++;
                     Thread.sleep(1000);
                 }

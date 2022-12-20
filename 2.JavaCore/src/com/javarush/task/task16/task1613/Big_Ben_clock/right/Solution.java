@@ -5,17 +5,23 @@ package com.javarush.task.task16.task1613.Big_Ben_clock.right;
 Big Ben clock
 */
 
+
+
+
 public class Solution {
+
     public static volatile boolean isStopped = false;
 
     public static void main(String[] args) throws InterruptedException {
         Clock clock = new Clock("Лондон", 23, 59, 57);
+
         Thread.sleep(4000);
         isStopped = true;
         Thread.sleep(1000);
     }
 
     public static class Clock extends Thread {
+
         private String cityName;
         private int hours;
         private int minutes;
@@ -41,13 +47,15 @@ public class Solution {
         private void printTime() throws InterruptedException {
             seconds++;
             Thread.sleep(1000);
-            if (seconds == 60){
+            if (seconds == 60) {
                 minutes++;
                 seconds = 0;
-            } if (minutes == 60){
+            }
+            if (minutes == 60) {
                 hours++;
                 minutes = 0;
-            }if (hours ==24) hours = 0;
+            }
+            if (hours == 24) hours = 0;
 
             //add your code here - добавь код тут
 
