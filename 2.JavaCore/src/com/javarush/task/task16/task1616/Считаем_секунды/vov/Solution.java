@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 // Считаем
+
 public class Solution {
     public static void main(String[] args) throws IOException {
         InputStreamReader in = new InputStreamReader(System.in);
