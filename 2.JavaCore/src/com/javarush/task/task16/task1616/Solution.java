@@ -4,10 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/* 
+/*
 Считаем секунды
 */
-
 public class Solution {
     public static void main(String[] args) throws IOException {
         InputStreamReader in = new InputStreamReader(System.in);
@@ -28,7 +27,7 @@ public class Solution {
 
         public void run() {
             try {
-                while (!isInterrupted()){
+                while (!isInterrupted()) {
                     seconds++;
                     Thread.sleep(1000);
                 }
