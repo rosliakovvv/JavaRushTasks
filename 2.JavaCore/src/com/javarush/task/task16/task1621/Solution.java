@@ -5,19 +5,21 @@ Thread.currentThread - всегда возвращает текущую нить
 */
 
 public class Solution {
-    static int count = 5;
+    static int count5 = 5;
+    static int count10 =10;
 
     public static void main(String[] args) {
         ThreadNamePrinter tnp = new ThreadNamePrinter();
         tnp.start();
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < count5; i++) {
             tnp.printMsg();
+
         }
     }
 
     public static class ThreadNamePrinter extends Thread {
         public void run() {
-            for (int i = 0; i < count; i++) {
+            for (int i = 0; i < count10; i++) {
                 printMsg();
             }
         }
@@ -25,9 +27,9 @@ public class Solution {
         public void printMsg() {
             Thread t = Thread.currentThread();//присвой переменной t текущую нить
             String name = t.getName();
-            System.out.println("Name=" + name);
+            System.out.println("Name = " + name);
             try {
-                Thread.sleep(1);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

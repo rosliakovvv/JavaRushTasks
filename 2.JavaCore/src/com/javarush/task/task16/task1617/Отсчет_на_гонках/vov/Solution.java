@@ -1,17 +1,10 @@
-package com.javarush.task.task16.task1617.Отсчет_на_гонках.right;
-
-
-/*
-Отсчет на гонках
-*/
-
+package com.javarush.task.task16.task1617.Отсчет_на_гонках.vov;
 
 public class Solution {
-    public static volatile int numSeconds = 5;
+    public static volatile int numSec = 5;
 
     public static void main(String[] args) throws InterruptedException {
         RacingClock clock = new RacingClock();
-        //add your code here - добавь код тут
         Thread.sleep(3500);
         clock.interrupt();
     }
@@ -21,23 +14,22 @@ public class Solution {
             start();
         }
 
+        @Override
         public void run() {
             while (!isInterrupted()) {
                 try {
-                    System.out.print(numSeconds + " ");
+                    System.out.print(numSec + " ");
+                    numSec--;
                     Thread.sleep(1000);
-                    numSeconds--;
-                    if (numSeconds == 0) {
-                        System.out.print("Марш!");
+                    if (numSec == 0) {
+                        System.out.println("Go!");
                         return;
                     }
                 } catch (InterruptedException e) {
-                    System.out.println("Прервано!");
+                    System.out.print("It's fail");
                     return;
                 }
             }
         }
-        //add your code here - добавь код тут
     }
 }
-

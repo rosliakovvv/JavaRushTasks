@@ -1,6 +1,5 @@
 package com.javarush.task.task16.task1620.Один_для_всех_все_для_одного.right;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,19 +7,19 @@ import java.util.List;
 Один для всех, все - для одного
 */
 
+
 public class Solution {
     public static byte threadCount = 3;
     static List<Thread> threads = new ArrayList<Thread>(threadCount);
 
     public static void main(String[] args) throws InterruptedException {
         initThreadsAndStart();
-        Thread.sleep(3000);
+        Thread.sleep(4000);
         ourInterruptMethod();
     }
 
     public static void ourInterruptMethod() {
-        for (Thread thread: threads
-        ) {
+        for (Thread thread : threads) {
             thread.interrupt();
         }
         //add your code here - добавь код тут
@@ -29,9 +28,9 @@ public class Solution {
     private static void initThreadsAndStart() {
         Water water = new Water("water");
         for (int i = 0; i < threadCount; i++) {
+            // При создании нити можно указать ее имя
             threads.add(new Thread(water, "#" + i));
         }
-
         for (int i = 0; i < threadCount; i++) {
             threads.get(i).start();
         }
@@ -48,10 +47,8 @@ public class Solution {
             //fix 2 variables - исправь 2 переменных
             boolean isCurrentThreadInterrupted = Thread.currentThread().isInterrupted();
             String threadName = Thread.currentThread().getName();
-
             try {
                 while (!isCurrentThreadInterrupted) {
-
                     System.out.println("Объект " + sharedResource + ", нить " + threadName);
                     Thread.sleep(1000);
                 }

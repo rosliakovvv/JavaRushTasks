@@ -13,7 +13,7 @@ public class Solution {
         isStopped = true;                                                  
         System.out.println("The clock has to be stopped");                                                  
         Thread.sleep(2000);                                                  
-        System.out.println("Double-check");                                                  
+        System.out.println("Double-check");
     }                                                  
                                                   
     public static class Clock extends Thread {                                                  
