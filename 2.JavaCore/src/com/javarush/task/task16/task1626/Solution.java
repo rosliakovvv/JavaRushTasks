@@ -16,7 +16,7 @@ public class Solution {
                     countIndexUp+=1;
                     System.out.println(toString());
                     Thread.sleep(500);
-                    if (countIndexUp>=Solution.number){return;}
+                    if (countIndexUp>=number){return;}
 
                 }
             } catch (InterruptedException e) {
@@ -33,7 +33,7 @@ public class Solution {
 
 
     public static class CountdownRunnable implements Runnable {
-        private int countIndexDown = Solution.number;
+        private int countIndexDown = number;
 
         public void run() {
             try {

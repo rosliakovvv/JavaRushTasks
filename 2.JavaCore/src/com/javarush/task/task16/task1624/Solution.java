@@ -4,6 +4,7 @@ package com.javarush.task.task16.task1624;
 Последовательные выполнения нитей
 */
 
+
 public class Solution {
     public static MyThread t = new MyThread();
     static String message = "inside main ";
@@ -19,7 +20,7 @@ public class Solution {
 
     public static void sleep() {
         try {
-            Thread.sleep(10);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
         }
     }

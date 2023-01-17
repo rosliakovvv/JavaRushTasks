@@ -4,12 +4,16 @@ package com.javarush.task.task16.task1626.Создание_по_образцу.r
 Создание по образцу
 */
 
+
 public class Solution {
+    // Количество итераций
     public static int number = 5;
 
-    public static void main(String[] args) {
-        new Thread(new CountdownRunnable(), "Уменьшаем").start();
-        new Thread(new CountUpRunnable(), "Увеличиваем").start();
+    public static void main(String[] args) throws InterruptedException {
+        Thread t = new Thread(new CountdownRunnable(), "Уменьшаем:");
+        t.start();
+        t.join();
+        new Thread(new CountUpRunnable(), "Увеличиваем:").start();
     }
 
     public static class CountUpRunnable implements Runnable {
@@ -19,7 +23,7 @@ public class Solution {
             try {
                 while (true) {
                     ++countIndexUp;
-                    System.out.println(toString());
+                    System.out.println(this);
                     Thread.sleep(500);
                     if (countIndexUp == Solution.number) return;
                 }
@@ -39,7 +43,7 @@ public class Solution {
         public void run() {
             try {
                 while (true) {
-                    System.out.println(toString());
+                    System.out.println(this);
                     countIndexDown -= 1;
                     if (countIndexDown == 0) return;
                     Thread.sleep(500);

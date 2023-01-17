@@ -12,7 +12,6 @@ public class Solution {
         for (int i = 0; i < COUNT; i++) {
             // Метод join сделает так чтобы нити работали поочереди
             new SleepingThread().join();
-
         }
     }
 

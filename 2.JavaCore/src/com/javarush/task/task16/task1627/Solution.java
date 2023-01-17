@@ -10,8 +10,8 @@ public class Solution {
     }
 
     public static class OnlineGame extends Thread {
+        // Переменная одна на всех игроков
         public static volatile boolean isWinnerFound = false;
-
         public static List<String> steps = new ArrayList<String>();
 
         static {
@@ -29,14 +29,16 @@ public class Solution {
             gamer1.start();
             gamer2.start();
             gamer3.start();
-
+            // Нити игроков не будет остановленны, пока один из них не выйграет
             while (!isWinnerFound) {
             }
+
             gamer1.interrupt();
             gamer2.interrupt();
             gamer3.interrupt();
         }
     }
+
 
     public static class Gamer extends Thread {
         private int rating;
@@ -50,23 +52,24 @@ public class Solution {
         public void run() {
             try {
                 for (String tx : OnlineGame.steps
-                        ) {
+                ) {
                     System.out.println(getName() + ":" + tx);
+                    // Чем больше рейтинг тем быстрее нить напечатает элементы списка
+                    // Вывод на экран не равномерный ))
                     Thread.sleep(1000 / rating);
                 }
+                // Сюда попадает первый игрок потому что проходит условие
                 if (!OnlineGame.isWinnerFound) {
                     System.out.println(getName() + ":победитель!");
+                    // Первый изменяет метку победителя
                     OnlineGame.isWinnerFound = true;
                 }
+                //
             } catch (InterruptedException e) {
+                // Игрок попадает сюда изза того что был вызван метод interrupt
                 System.out.println(getName() + ":проиграл");
             }
             //Add your code here - добавь код тут
-        }
-
-        @Override
-        public String toString() {
-            return getName() + ": " + OnlineGame.steps;
         }
     }
 }
