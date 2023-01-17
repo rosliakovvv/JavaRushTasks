@@ -12,7 +12,8 @@ public class Solution {
     public static volatile BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
     public static void main(String[] args) throws IOException {
-        //read count of strings
+
+        // Количество значений, которое мы можем ввести
         int count = Integer.parseInt(reader.readLine());
 
         //init threads
@@ -24,6 +25,8 @@ public class Solution {
         consolReader2.start();
         consolReader3.start();
 
+
+        // Кол-во введенный значений и прочитанных
         while (count > readStringCount.get()) {
         }
 

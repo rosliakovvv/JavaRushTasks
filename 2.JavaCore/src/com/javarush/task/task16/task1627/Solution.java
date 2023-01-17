@@ -30,6 +30,7 @@ public class Solution {
             gamer2.start();
             gamer3.start();
             // Нити игроков не будет остановленны, пока один из них не выйграет
+            // Циклом можно контролировать время игры!
             while (!isWinnerFound) {
             }
 
