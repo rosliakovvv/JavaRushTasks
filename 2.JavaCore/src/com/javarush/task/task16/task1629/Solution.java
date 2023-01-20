@@ -26,6 +26,8 @@ public class Solution {
         String result = "";
         int i = 0;
 
+
+        // Не понял зачем эта строчка, может быть JR просто показывает что еще может быть ))
         public Read3Strings() {
             super();
         }
@@ -35,7 +37,7 @@ public class Solution {
             for(;i<3;){
                 try {
                    // if(reader.ready()){
-                        result = result + " " + reader.readLine();
+                        result = result + reader.readLine() + " ";
                         i++;
                  //   }
                 } catch (IOException e) {
