@@ -38,6 +38,7 @@ public class Solution {
             }
         }
 
+        // Метод выдает разное кол-во шагов для разных бегунов в зависимости от их скорости
         private void doStep() {
             stepNumber++;
             try {
