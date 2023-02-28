@@ -7,6 +7,7 @@ import java.util.List;
 Заметки
 */
 
+
 public class Solution {
     public static void main(String[] args) {
         new NoteThread().start();
@@ -14,7 +15,6 @@ public class Solution {
     }
 
     public static class Note {
-
         public static final List<String> notes = new ArrayList<>();
 
         public static void addNote(String note) {
@@ -22,6 +22,7 @@ public class Solution {
         }
 
         public static void removeNote(String threadName) {
+            // TODO: 30.01.2023 - Как тут может получиться null?
             String note = notes.remove(0);
             if (note == null) {
                 System.out.println("Другая нить удалила нашу заметку");
@@ -32,12 +33,14 @@ public class Solution {
             }
         }
     }
-    public static class NoteThread extends Thread{
-        public void run(){
+
+
+    public static class NoteThread extends Thread {
+        public void run() {
             try {
-                for (int i = 0; i <1000 ; i++) {
+                for (int i = 0; i < 10; i++) {
                     Note.addNote(getName() + "-Note" + i);
-                    Thread.sleep(1);
+                    Thread.sleep(10);
                     Note.removeNote(getName());
                 }
             } catch (InterruptedException e) {

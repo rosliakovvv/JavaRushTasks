@@ -1,36 +1,30 @@
-package com.javarush.task.task17.task1701.Заметки.vov1;
+package com.javarush.task.task17.task1701.Заметки.vov;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sol1 {
-
+public class Sol {
     public static void main(String[] args) {
-        new NoteThreadV1().start();
-        new NoteThreadV1().start();
+        new NoteThr().start();
+        new NoteThr().start();
     }
 
-    public static class NoteThreadV1 extends Thread {
+    public static class NoteThr extends Thread {
         public void run() {
-            for (int i = 0; i < 1000; i++) {
-                NoteV1.addNote(getName() + "-Note" + i);
-
+            for (int i = 0; i < 10; i++) {
+                NoteObj.addNote(getName() + "-Note" + i);
                 try {
-                    Thread.sleep(1);
+                    Thread.sleep(100);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-
-                //ghhhgh
-                //tot
-
-                NoteV1.removeNote(getName());
+                NoteObj.removeNote(getName());
             }
         }
     }
 
-    public static class NoteV1 {
 
+    public static class NoteObj {
         public static final List<String> notes = new ArrayList<>();
 
         public static void addNote(String note) {

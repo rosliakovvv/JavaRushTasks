@@ -7,6 +7,7 @@ import java.util.List;
 Вместе быстрее? Ща проверим :)
 */
 
+
 public class Solution {
     public static int threadCount = 10;
     public static int[] testArray = new int[1000];
@@ -22,9 +23,7 @@ public class Solution {
         for (int i = 1000 - 1; i >= 0; i--) {
             expectedResult.append(i).append(" ");
         }
-
         initThreads();
-
         StringBuffer result = new StringBuffer();
         for (int i = 0; i < testArray.length; i++) {
             result.append(testArray[i]).append(" ");
