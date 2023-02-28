@@ -8,6 +8,7 @@ import java.util.List;
 */
 
 public class Solution {
+
     public static void main(String[] args) {
         new NoteThread().start();
         new NoteThread().start();
@@ -32,10 +33,12 @@ public class Solution {
             }
         }
     }
-    public static class NoteThread extends Thread{
-        public void run(){
+
+    public static class NoteThread extends Thread {
+
+        public void run() {
             try {
-                for (int i = 0; i <1000 ; i++) {
+                for (int i = 0; i < 1000; i++) {
                     Note.addNote(getName() + "-Note" + i);
                     Thread.sleep(1);
                     Note.removeNote(getName());

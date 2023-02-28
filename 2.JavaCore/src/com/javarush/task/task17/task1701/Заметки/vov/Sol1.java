@@ -1,4 +1,4 @@
-package com.javarush.task.task17.task1701.Заметки.vov1;
+package com.javarush.task.task17.task1701.Заметки.vov;
 
 import java.util.ArrayList;
 import java.util.List;
