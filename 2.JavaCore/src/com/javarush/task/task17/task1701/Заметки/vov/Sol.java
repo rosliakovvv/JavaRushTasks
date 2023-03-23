@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Sol {
+
     public static void main(String[] args) {
         new NoteThr().start();
         new NoteThr().start();
     }
 
     public static class NoteThr extends Thread {
+
         public void run() {
             for (int i = 0; i < 10; i++) {
                 NoteObj.addNote(getName() + "-Note" + i);
@@ -23,8 +25,8 @@ public class Sol {
         }
     }
 
-
     public static class NoteObj {
+
         public static final List<String> notes = new ArrayList<>();
 
         public static void addNote(String note) {

@@ -3,7 +3,7 @@ package com.javarush.task.task17.task1705.Сад_огород.vov;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Solution {
+public class Sol {
     public static void main(String[] args) {
     }
 

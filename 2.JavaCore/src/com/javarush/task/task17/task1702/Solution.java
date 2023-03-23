@@ -7,9 +7,11 @@ import java.util.List;
 Вместе быстрее? Ща проверим :)
 */
 
-
 public class Solution {
+
+    // Количество нитей
     public static int threadCount = 10;
+
     public static int[] testArray = new int[1000];
 
     static {
@@ -19,12 +21,14 @@ public class Solution {
     }
 
     public static void main(String[] args) throws InterruptedException {
+
         // Создадим "правильный" массив.
         StringBuffer expectedResult = new StringBuffer();
         for (int i = 1000 - 1; i >= 0; i--) {
             expectedResult.append(i).append(" ");
         }
         initThreads();
+
         StringBuffer result = new StringBuffer();
         for (int i = 0; i < testArray.length; i++) {
             result.append(testArray[i]).append(" ");
@@ -35,8 +39,10 @@ public class Solution {
     }
 
     public static void initThreads() throws InterruptedException {
-        List<Thread> threads = new ArrayList<Thread>(threadCount);
-        for (int i = 0; i < threadCount; i++) threads.add(new SortThread());
+
+        List<Thread> threads = new ArrayList<>(threadCount);
+        for (int i = 0; i < threadCount; i++)
+            threads.add(new SortThread());
         // Запускаем потоки
         for (Thread thread : threads) {
             thread.start();
@@ -62,7 +68,9 @@ public class Solution {
     }
 
     public static class SortThread extends Thread {
+
         public void run() {
+
             Solution.sort(testArray);
         }
     }
