@@ -8,9 +8,11 @@ import java.util.List;
 */
 
 public class Restaurant {
+
     public static List<Thread> threads = new ArrayList<>();
 
     public static void main(String[] args) throws Exception {
+
         Waiter waiterTarget = new Waiter();
         Thread waiter = new Thread(waiterTarget);
         threads.add(waiter);

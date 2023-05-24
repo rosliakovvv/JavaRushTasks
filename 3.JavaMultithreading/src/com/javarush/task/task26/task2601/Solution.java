@@ -64,7 +64,7 @@ public class Solution {
             mediana = (mediana1 + mediana2)/2;
         }
         List<Medianator> listOfMedianators = new ArrayList<>();
-        // итерируясь по массиву добавил в этот список создаваемые объекты медианаторы: для каждого элемента массива - один объект.
+        // итерируясь по массиву добавил в этот список создаваемые объекты медианаторы: для каждого элемента массива - file1.txt объект.
         for(int i = 0; i < array.length; i++){
             int keyOffset = mediana - array[i];
             if (keyOffset < 0)

@@ -6,10 +6,14 @@ import java.util.List;
 Таблица
 */
 
+
 public class Solution {
+
     public class TableInterfaceWrapper implements TableInterface {
+
         private TableInterface original;
-        public TableInterfaceWrapper(TableInterface original){
+
+        public TableInterfaceWrapper(TableInterface original) {
             this.original = original;
         }
 
@@ -30,7 +34,9 @@ public class Solution {
         }
     }
 
+
     public interface TableInterface {
+
         void setModel(List rows);
 
         String getHeaderText();

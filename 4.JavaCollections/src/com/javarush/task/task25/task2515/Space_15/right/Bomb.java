@@ -17,7 +17,7 @@ public class Bomb extends BaseObject {
     }
 
     /**
-     * Двигаем себя вниз на один ход.
+     * Двигаем себя вниз на file1.txt ход.
      */
     @Override
     public void move() {

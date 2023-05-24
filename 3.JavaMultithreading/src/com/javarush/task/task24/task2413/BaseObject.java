@@ -46,7 +46,7 @@ public abstract class BaseObject {
     abstract void draw(Canvas canvas);
 
     /**
-     * Двигаем себя на один ход.
+     * Двигаем себя на file1.txt ход.
      */
     abstract void move();
 

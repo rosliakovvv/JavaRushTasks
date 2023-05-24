@@ -51,7 +51,7 @@ public abstract class BaseObject {
     }
 
     /**
-     * Двигаем себя на один ход.
+     * Двигаем себя на file1.txt ход.
      */
     public void move() {
         //do nothing

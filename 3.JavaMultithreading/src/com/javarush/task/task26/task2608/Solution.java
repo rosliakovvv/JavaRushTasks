@@ -1,7 +1,7 @@
 package com.javarush.task.task26.task2608;                                                                                                    
                                                                                                     
 /*                                                                                                     
-Мудрый человек думает раз, прежде чем два раза сказать                                                                                                    
+Мудрый человек думает раз, прежде чем file2.txt раза сказать
 */                                                                                                    
 public class Solution {                                                                                                    
     int var1;                                                                                                    

@@ -7,12 +7,14 @@ import java.util.List;
 Аптека
 */
 
+
 public class Solution {
+
     public static DrugsController drugsController = new DrugsController();
     public static boolean isStopped = false;
 
     public static void main(String[] args) throws InterruptedException {
-        Thread apteka = new Thread(new Apteka(), "Apteka");
+        Thread apteka = new Thread(new Apteka(), "Aptika");
         Thread man = new Thread(new Person(), "Мужчина");
         Thread woman = new Thread(new Person(), "Женщина");
 
@@ -24,23 +26,26 @@ public class Solution {
         isStopped = true;
     }
 
-    public static class Apteka implements Runnable{
-        public  void run(){
-            while (!isStopped){
-            drugsController.buy(getRandomDrug(),getRandomCount());
-                for (int i = 0; i <3; i++) {
+    public static class Apteka implements Runnable {
+
+        public void run() {
+            while (!isStopped) {
+                // Это метод закупки аптеки
+                drugsController.buy(getRandomDrug(), getRandomCount());
+                for (int i = 0; i < 3; i++) {
                     waitAMoment();
                 }
             }
         }
     }
 
-    public static class Person implements Runnable{
+
+    public static class Person implements Runnable {
 
         @Override
         public void run() {
-            while (!isStopped){
-                drugsController.sell(getRandomDrug(),getRandomCount());
+            while (!isStopped) {
+                drugsController.sell(getRandomDrug(), getRandomCount());
                 waitAMoment();
             }
         }
@@ -51,6 +56,8 @@ public class Solution {
     }
 
     public static Drug getRandomDrug() {
+        // 1000 нужна чтобы был запас для списка лекарст, т.е. не больше 1000
+        // index крутиться в диапазоне размера списка
         int index = (int) ((Math.random() * 1000) % (DrugsController.allDrugs.size()));
         List<Drug> drugs = new ArrayList<>(DrugsController.allDrugs.keySet());
         return drugs.get(index);

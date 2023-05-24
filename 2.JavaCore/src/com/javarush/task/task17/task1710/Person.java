@@ -3,6 +3,7 @@ package com.javarush.task.task17.task1710;
 import java.util.Date;
 
 public class Person {
+
     private String name;
     private Sex sex;
     private Date birthDate;

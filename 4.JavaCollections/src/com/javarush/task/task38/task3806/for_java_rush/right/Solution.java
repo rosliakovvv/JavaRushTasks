@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class Solution {
     public void printFile1() throws IOException {
-        try (FileInputStream fileInputStream = new FileInputStream("file.txt")) {
+        try (FileInputStream fileInputStream = new FileInputStream("A.txt")) {
             int data = fileInputStream.read();
             while (data != -1) {
                 System.out.println(data);
@@ -21,7 +21,7 @@ public class Solution {
     }
 
     public void printFile2() throws IOException {
-        try (BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream("file.txt"))) {
+        try (BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream("A.txt"))) {
             int data = bufferedInputStream.read();
             while (data != -1) {
                 System.out.println(data);

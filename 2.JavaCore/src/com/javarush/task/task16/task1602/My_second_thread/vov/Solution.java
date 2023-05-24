@@ -11,7 +11,7 @@ public class Solution {
 
     private static class TestTread extends Thread {
 
-        // Сработает только один раз (при инициализации)
+        // Сработает только file1.txt раз (при инициализации)
         static {
             System.out.println("It's a static block inside TestThread");
         }

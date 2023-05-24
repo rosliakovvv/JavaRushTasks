@@ -7,7 +7,7 @@ import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 /*
-И еще один адаптер
+И еще file1.txt адаптер
 */
 
 public class Solution {

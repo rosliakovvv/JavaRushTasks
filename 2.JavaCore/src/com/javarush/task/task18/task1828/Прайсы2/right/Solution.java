@@ -33,12 +33,15 @@ public class Solution {
     }
 
     public static void main(String[] args) throws Exception {
+
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
         String fileName = reader.readLine();
+        String fullFileName = "2.JavaCore/src/com/javarush/task/task18/task1828/Прайсы2/right/" + fileName +".txt";
 
         List<Product> products = new ArrayList<>();
 
-        try (BufferedReader fileReader = new BufferedReader(new FileReader(fileName))) {
+        try (BufferedReader fileReader = new BufferedReader(new FileReader(fullFileName))) {
             while (fileReader.ready()) {
                 Product product = getProduct(fileReader.readLine());
                 products.add(product);
@@ -47,7 +50,9 @@ public class Solution {
 
         switch (args[0]) {
             case "-u": {
+
                 int id = Integer.parseInt(args[1]);
+
                 String name = "";
                 for (int i = 2; i < args.length - 2; i++) {
                     name += args[i] + " ";
@@ -55,18 +60,22 @@ public class Solution {
                 if (name.length() > 30) {
                     name = name.substring(0, 30);
                 }
+
                 String price = args[args.length - 2];
                 if (price.length() > 8) {
                     price = price.substring(0, 8);
                 }
+
                 String quantity = args[args.length - 1];
                 if (quantity.length() > 4) {
                     quantity = quantity.substring(0, 4);
                 }
+
                 Product productToUpdate = null;
                 for (Product product : products) {
                     if (product.id == id) productToUpdate = product;
                 }
+
                 if (productToUpdate != null) {
                     productToUpdate.name = name;
                     productToUpdate.price = price;
@@ -85,7 +94,7 @@ public class Solution {
             }
         }
 
-        try (FileWriter fileWriter = new FileWriter(fileName)) {
+        try (FileWriter fileWriter = new FileWriter(fullFileName)) {
             for (Product product : products) {
                 fileWriter.write(product.toString());
                 fileWriter.write("\n");
@@ -94,10 +103,12 @@ public class Solution {
     }
 
     public static Product getProduct(String string) {
+
         String id = string.substring(0, 8).trim();
         String name = string.substring(8, 38).trim();
         String price = string.substring(38, 46).trim();
         String quantity = string.substring(46, 50).trim();
+
         return new Product(Integer.parseInt(id), name, price, quantity);
     }
 }

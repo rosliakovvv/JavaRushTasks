@@ -43,7 +43,7 @@ public class SpaceShip extends BaseObject {
     }
 
     /**
-     * Двигаем себя на один ход.
+     * Двигаем себя на file1.txt ход.
      * Проверяем столкновение с границами.
      */
     @Override

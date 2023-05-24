@@ -67,7 +67,7 @@ public class Ball extends BaseObject {
     }
 
     /**
-     * Двигаем себя на один шаг.
+     * Двигаем себя на file1.txt шаг.
      */
     public void move() {
         if (isFrozen) return;

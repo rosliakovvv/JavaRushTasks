@@ -13,6 +13,7 @@ public class Solution {
         String fileName2 = reader.readLine();
 
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+
         try (FileInputStream fileInputStream1 = new FileInputStream(fileName1);
              FileInputStream fileInputStream2 = new FileInputStream(fileName2)) {
 

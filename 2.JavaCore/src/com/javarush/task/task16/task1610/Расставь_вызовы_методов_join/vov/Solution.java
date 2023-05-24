@@ -26,7 +26,7 @@ public class Solution {
         protected Kitten kitten2;
 
 
-        // У каждой кошки по два котенка
+        // У каждой кошки по file2.txt котенка
         public Cat(String name) {
             super(name);
             kitten1 = new Kitten("Котенок 1, мама - " + getName());

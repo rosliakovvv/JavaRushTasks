@@ -3,6 +3,7 @@ package com.javarush.task.task18.task1812.Расширяем_AmigoOutputStream.r
 import java.io.IOException;
 
 public interface AmigoOutputStream {
+
     void flush() throws IOException;
 
     void write(int b) throws IOException;

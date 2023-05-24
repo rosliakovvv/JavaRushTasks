@@ -25,8 +25,8 @@ public class Solution {
         map.put(5, "пять");
         map.put(4, "четыре");
         map.put(3, "три");
-        map.put(2, "два");
-        map.put(1, "один");
+        map.put(2, "file2.txt");
+        map.put(1, "file1.txt");
         map.put(0, "ноль");
     }
 

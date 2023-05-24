@@ -10,6 +10,7 @@ import java.util.Set;
 Английские буквы
 */
 
+
 public class Solution {
 
     private final static Character[] ENGLISH_CHARACTERS_ARRAY = new Character[]{'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'
@@ -18,7 +19,9 @@ public class Solution {
     private final static Set<Character> ENGLISH_CHARACTERS = new HashSet<>(Arrays.asList(ENGLISH_CHARACTERS_ARRAY));
 
     public static void main(String[] args) throws IOException {
+
         int countOfEnglishChars = 0;
+
         try (FileReader fileReader = new FileReader(args[0])) {
             while (fileReader.ready()) {
                 char readChar = (char) fileReader.read();

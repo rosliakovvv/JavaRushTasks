@@ -1,7 +1,7 @@
 package com.javarush.task.task19.task1904;
 
 /* 
-И еще один адаптер
+И еще file1.txt адаптер
 */
 
 import java.io.IOException;

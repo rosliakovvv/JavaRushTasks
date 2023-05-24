@@ -10,7 +10,9 @@ import java.util.Locale;
 CRUD 2
 */
 
+
 public class Solution {
+
     public static volatile List<Person> allPeople = new ArrayList<Person>();
 
     static {
@@ -25,6 +27,7 @@ public class Solution {
 
         try {
             switch (args[0]) {
+                // c name1 sex1 bd1 name2 sex2 bd2 ...
                 case "-c":
                     synchronized (allPeople) {
                         for (int i = 1; i < args.length; i = i + 3) {
@@ -33,10 +36,11 @@ public class Solution {
                             Date date = inputFormat.parse(args[i + 2]);
                             Person person = sex.equals("м") ? Person.createMale(name, date) : Person.createFemale(name, date);
                             allPeople.add(person);
-                            System.out.println(allPeople.indexOf(person));
+                            System.out.println("вапвап");
                         }
                     }
                     break;
+                // -u id1 name1 sex1 bd1 id2 name2 sex2 bd2 ...
                 case "-u":
                     synchronized (allPeople) {
                         for (int i = 1; i < args.length; i = i + 4) {
@@ -50,6 +54,7 @@ public class Solution {
                         }
                     }
                     break;
+                // -d id1 id2 id3 id4 ...
                 case "-d":
                     synchronized (allPeople) {
                         for (int i = 1; i < args.length; i++) {
@@ -59,6 +64,7 @@ public class Solution {
                         }
                     }
                     break;
+                // -i id1 id2 id3 id4 ...
                 case "-i":
                     synchronized (allPeople) {
                         for (int i = 1; i < args.length; i++) {

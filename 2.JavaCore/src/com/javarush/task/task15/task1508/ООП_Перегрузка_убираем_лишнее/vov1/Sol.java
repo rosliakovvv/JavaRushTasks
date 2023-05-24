@@ -10,7 +10,7 @@ public class Sol {
     }
 
     private static void printTest(long i) {
-        System.out.println(" два ");
+        System.out.println(" file2.txt ");
     }
 
 

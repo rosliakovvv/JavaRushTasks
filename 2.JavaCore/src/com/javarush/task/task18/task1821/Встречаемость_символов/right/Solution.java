@@ -9,7 +9,9 @@ import java.io.IOException;
 
 public class Solution {
     public static void main(String[] args) throws IOException {
+
         int[] aSCII = new int[128];
+
         try (FileReader reader = new FileReader(args[0])) {
             while (reader.ready()) {
                 aSCII[reader.read()]++;

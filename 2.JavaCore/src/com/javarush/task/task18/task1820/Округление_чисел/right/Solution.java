@@ -16,7 +16,9 @@ public class Solution {
              PrintWriter printWriter = new PrintWriter(new FileWriter(fileName2))) {
 
             while (bufferedFileReader.ready()) {
+
                 String[] splittedLine = bufferedFileReader.readLine().split(" ");
+
                 for (String numberInString : splittedLine) {
                     double number = Double.parseDouble(numberInString);
                     long roundedNumber = Math.round(number);

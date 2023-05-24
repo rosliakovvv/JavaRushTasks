@@ -7,7 +7,9 @@ import java.util.List;
 Ресторан
 */
 
+
 public class Restaurant {
+
     public static List<Thread> threads = new ArrayList<>();
 
     public static void main(String[] args) throws Exception {

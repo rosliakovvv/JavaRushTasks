@@ -7,8 +7,11 @@ package com.javarush.task.task18.task1816;
 import java.io.*;
 
 public class Solution {
+
     public static String fileName = "C:\\Users\\User\\Desktop\\test.txt";
+
     public static void main(String[] args) throws IOException {
+
         FileInputStream inputStream = new FileInputStream(args[0]);
 
         byte[] bytes = new byte[inputStream.available()];

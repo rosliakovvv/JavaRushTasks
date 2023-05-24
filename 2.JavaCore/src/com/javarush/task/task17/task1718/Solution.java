@@ -4,7 +4,9 @@ package com.javarush.task.task17.task1718;
 Глажка
 */
 
+
 public class Solution {
+
     public static void main(String[] args) {
         Person diana = new Person("Diana");
         Person igor = new Person("Igor");
@@ -12,19 +14,21 @@ public class Solution {
         igor.start();
     }
 
-    public static class Person extends Thread { //Человек
+    public static class Person extends Thread {
 
+        //Человек
         public Person(String name) {
             super(name);
         }
 
         @Override
         public void run() {
-            synchronized (Iron.class){
-            Iron iron = takeIron();
-            Clothes clothes = takeClothes();
-            iron(iron, clothes);
-            returnIron();}
+            synchronized (Iron.class) {
+                Iron iron = takeIron();
+                Clothes clothes = takeClothes();
+                iron(iron, clothes);
+                returnIron();
+            }
         }
 
         protected Iron takeIron() {
@@ -46,10 +50,14 @@ public class Solution {
         }
     }
 
-    public static class Iron {
-    } //Утюг
 
-    public static class Clothes {//Одежда
+    public static class Iron {
+        //Утюг
+    }
+
+
+    public static class Clothes {
+        //Одежда
         String name;
 
         public Clothes(String name) {

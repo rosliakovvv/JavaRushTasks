@@ -1,7 +1,7 @@
 package com.javarush.task.task07.task0725;
 
 /* 
-Переставь один модификатор static
+Переставь file1.txt модификатор static
 */
 
 public class Solution {

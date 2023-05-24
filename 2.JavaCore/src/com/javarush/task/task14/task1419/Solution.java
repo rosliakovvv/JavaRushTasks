@@ -54,7 +54,7 @@ public class Solution {
             exceptions.add(e);
         }
         try {
-            File f = new File("C://file.txt");
+            File f = new File("C://A.txt");
             FileReader fr = new FileReader(f);
         } catch (FileNotFoundException e) {
             exceptions.add(e);

@@ -3,6 +3,7 @@ package com.javarush.task.task17.task1720;
 import java.math.BigDecimal;
 
 public class BankAccount {
+
     private volatile BigDecimal balance;
     private String owner;
 
@@ -30,11 +31,11 @@ public class BankAccount {
         System.out.println("Тратим " + money + ", на счету " + balance);
     }
 
-    public  void deposit(String money) {
+    public void deposit(String money) {
         deposit(new BigDecimal(money));
     }
 
-    public  void withdraw(String money) throws NotEnoughMoneyException {
+    public void withdraw(String money) throws NotEnoughMoneyException {
         withdraw(new BigDecimal(money));
     }
 }

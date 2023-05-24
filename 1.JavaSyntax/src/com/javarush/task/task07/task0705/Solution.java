@@ -1,7 +1,7 @@
 package com.javarush.task.task07.task0705;
 
 /* 
-Один большой массив и два маленьких
+Один большой массив и file2.txt маленьких
 */
 
 import java.util.Arrays;

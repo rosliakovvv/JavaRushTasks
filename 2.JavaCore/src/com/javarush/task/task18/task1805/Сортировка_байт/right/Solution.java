@@ -12,10 +12,12 @@ import java.util.TreeSet;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        String fileName = bufferedReader.readLine();
 
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+        String fileName = bufferedReader.readLine();
         Set<Integer> bytes = new TreeSet<>();
+
         try (FileInputStream fileInputStream = new FileInputStream(fileName)) {
             while (fileInputStream.available() > 0) {
                 bytes.add(fileInputStream.read());

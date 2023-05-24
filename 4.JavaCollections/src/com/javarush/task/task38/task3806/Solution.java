@@ -12,8 +12,8 @@ public class Solution {
     public void printFile1() throws IOException {                                                                                                    
        // FileInputStream fileInputStream = null;                                                                                                    
                                                                                                     
-        try (FileInputStream fileInputStream = new FileInputStream("file.txt")){                                                                                                    
-            // fileInputStream = new FileInputStream("file.txt");                                                                                                    
+        try (FileInputStream fileInputStream = new FileInputStream("A.txt")){
+            // fileInputStream = new FileInputStream("A.txt");
                                                                                                     
             int data = fileInputStream.read();                                                                                                    
             while (data != -1) {                                                                                                    
@@ -31,7 +31,7 @@ public class Solution {
                                                                                                     
     public void printFile2() throws IOException {                                                                                                    
         
-        try (FileInputStream fileInputStream = new FileInputStream("file.txt");                                                                                                    
+        try (FileInputStream fileInputStream = new FileInputStream("A.txt");
            BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStream)){                                                                                                    
 
                                                                                                     

@@ -6,7 +6,9 @@ import java.io.*;
 Разделение файла
 */
 
+
 public class Solution {
+
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String inputFile = reader.readLine();
@@ -19,6 +21,7 @@ public class Solution {
 
             int halfOfFile = (fileInputStream.available() + 1) / 2;
             int numberOfByte = 0;
+
             while (fileInputStream.available() > 0) {
                 if (numberOfByte < halfOfFile) {
                     fileOutputStream1.write(fileInputStream.read());

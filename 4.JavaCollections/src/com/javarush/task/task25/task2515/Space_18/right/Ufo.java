@@ -26,7 +26,7 @@ public class Ufo extends BaseObject {
     }
 
     /**
-     * Двигаем себя на один ход в случайном направлении.
+     * Двигаем себя на file1.txt ход в случайном направлении.
      */
     @Override
     public void move() {

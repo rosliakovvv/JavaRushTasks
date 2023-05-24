@@ -11,8 +11,11 @@ import java.util.List;
 Прайсы
 */
 
+
 public class Solution {
+
     public static class Product {
+
         int id;
         String name;
         String price;
@@ -32,21 +35,29 @@ public class Solution {
     }
 
     public static void main(String[] args) throws Exception {
+
         if (args.length == 0) {
             return;
         }
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
         String fileName = reader.readLine();
+
+        String fullFileName = "2.JavaCore/src/com/javarush/task/task18/task1827/Прайсы/right/" + fileName + ".txt";
 
         List<Product> products = new ArrayList<>();
 
-        try (BufferedReader fileReader = new BufferedReader(new FileReader(fileName))) {
+        try (BufferedReader fileReader = new BufferedReader(new FileReader(fullFileName))) {
             while (fileReader.ready()) {
                 Product product = getProduct(fileReader.readLine());
                 products.add(product);
             }
         }
+
+//        for (Product product : products) {
+//            System.out.println(product);
+//        }
 
         switch (args[0]) {
             case "-c":
@@ -70,7 +81,8 @@ public class Solution {
                     quantity = quantity.substring(0, 4);
                 }
                 Product product = new Product(++id, name.trim(), price, quantity);
-                try (FileWriter fileWriter = new FileWriter(fileName, true)) {
+
+                try (FileWriter fileWriter = new FileWriter(fullFileName, true)) {
                     fileWriter.write("\n");
                     fileWriter.write(product.toString());
                 }
@@ -78,10 +90,13 @@ public class Solution {
     }
 
     public static Product getProduct(String string) {
+
         String id = string.substring(0, 8).trim();
         String name = string.substring(8, 38).trim();
         String price = string.substring(38, 46).trim();
+        // Надо чтобы в исходном файле все 49 симолов были! в каждой строке!
         String quantity = string.substring(46, 50).trim();
+
         return new Product(Integer.parseInt(id), name, price, quantity);
     }
 }

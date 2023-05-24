@@ -10,7 +10,9 @@ import java.util.Locale;
 CRUD
 */
 
+
 public class Solution {
+
     public static List<Person> allPeople = new ArrayList<Person>();
 
     static {

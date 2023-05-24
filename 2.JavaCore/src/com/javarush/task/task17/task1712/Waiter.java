@@ -1,6 +1,7 @@
 package com.javarush.task.task17.task1712;
 
 public class Waiter implements Runnable {
+
     public boolean continueWorking = true;
 
     @Override

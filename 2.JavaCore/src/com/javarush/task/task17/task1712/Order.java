@@ -1,7 +1,9 @@
 package com.javarush.task.task17.task1712;
 
 public class Order {
+
     private long time;
+    // Номер столика -V
     private byte tableNumber;
 
     public Order(byte tableNumber) {

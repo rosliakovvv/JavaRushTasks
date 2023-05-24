@@ -6,13 +6,14 @@ import java.util.*;
 Общий список
 */
 
+
 public class Solution implements List<Long> {
+
     private ArrayList<Long> original = new ArrayList<Long>();
 
     public static void main(String[] args) {
 
     }
-
 
     @Override
     public synchronized int size() {

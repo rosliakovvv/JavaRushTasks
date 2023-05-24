@@ -9,18 +9,20 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class QuestionFileOutputStream implements AmigoOutputStream {
+
     private AmigoOutputStream original;
-    public QuestionFileOutputStream(AmigoOutputStream amigoOutputStream){
+
+    public QuestionFileOutputStream(AmigoOutputStream amigoOutputStream) {
         this.original = amigoOutputStream;
-        }
+    }
 
     @Override
     public void close() throws IOException {
-        System.out.println( "Вы действительно хотите закрыть поток? Д/Н");
+        System.out.println("Вы действительно хотите закрыть поток? Д/Н");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String answer = reader.readLine();
-        if (answer.equals("Д")){
-        original.close();
+        if (answer.equals("Д")) {
+            original.close();
         }
     }
 

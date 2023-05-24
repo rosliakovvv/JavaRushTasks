@@ -18,7 +18,7 @@ public class Rocket extends BaseObject {
     }
 
     /**
-     * Двигаем себя вверх на один ход.
+     * Двигаем себя вверх на file1.txt ход.
      */
     @Override
     public void move() {

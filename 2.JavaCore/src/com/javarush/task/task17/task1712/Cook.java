@@ -1,6 +1,7 @@
 package com.javarush.task.task17.task1712;
 
 public class Cook implements Runnable {
+
     public boolean continueWorking = true;
 
     @Override
@@ -34,5 +35,7 @@ public class Cook implements Runnable {
         Thread.sleep(order.getTime());     // готовим блюдо
         Dishes dishes = new Dishes(order.getTableNumber());       //  это готовое блюдо
         System.out.println(String.format("Заказ для стола №%d готов", dishes.getTableNumber()));
+        manager.getDishesQueue().add(dishes);
+
     }
 }

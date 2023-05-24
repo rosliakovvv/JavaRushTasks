@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DrugsController {
+    // были перепутанны названия методов buy / sell
+
     public static Map<Drug, Integer> allDrugs = new HashMap<Drug, Integer>();   // <Лекарство, Количество>
 
     static {
@@ -20,7 +22,7 @@ public class DrugsController {
         allDrugs.put(placebo, 1);
     }
 
-    public synchronized void buy(Drug drug, int count) {
+    public synchronized void sell(Drug drug, int count) {
         String name = Thread.currentThread().getName();
         if (!allDrugs.containsKey(drug)) {
             System.out.println("Нет в наличии");
@@ -34,11 +36,14 @@ public class DrugsController {
         }
     }
 
-    public synchronized void sell(Drug drug, int count) {
+    //
+    public synchronized void buy(Drug drug, int count) {
         System.out.println(Thread.currentThread().getName() + " Закупка " + drug.getName() + " " + count);
+        // Если этого рпепарата нет, то занести в список -V
         if (!allDrugs.containsKey(drug)) {
             allDrugs.put(drug, 0);
         }
+        // Если есть, то добавить кол-во
         Integer currentCount = allDrugs.get(drug);
         allDrugs.put(drug, (currentCount + count));
     }

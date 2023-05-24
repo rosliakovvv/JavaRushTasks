@@ -6,7 +6,8 @@ package com.javarush.task.task18.task1819;
 
 import java.io.*;
 
-public class Solution {
+public class
+Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String file1 = reader.readLine();
@@ -26,7 +27,7 @@ public class Solution {
         while (fileInputStream2.available() > 0) {
             int dt = fileInputStream2.read();
             fileOutputStream.write(dt);
-        } // перекидываем данные из файла 2 в файл один
+        } // перекидываем данные из файла 2 в файл file1.txt
 
         fileOutputStream.write(buffer1, 0, file1Data); //дописываем данные из буффера
         fileInputStream2.close();
