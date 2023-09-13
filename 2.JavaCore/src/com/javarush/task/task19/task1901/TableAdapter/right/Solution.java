@@ -4,7 +4,9 @@ package com.javarush.task.task19.task1901.TableAdapter.right;
 TableAdapter
 */
 
+
 public class Solution {
+
     public static void main(String[] args) {
         //это пример вывода
         ATable aTable = new ATable() {
@@ -24,6 +26,8 @@ public class Solution {
     }
 
     public static class TableAdapter implements BTable {
+
+        // idea просит сделать final, наверно чтобы только один раз можно было подключиться.
         private ATable aTable;
 
         public TableAdapter(ATable aTable) {
@@ -36,13 +40,17 @@ public class Solution {
         }
     }
 
+
     public interface ATable {
+
         String getCurrentUserName();
 
         String getTableName();
     }
 
+
     public interface BTable {
+
         String getHeaderText();
     }
 }
