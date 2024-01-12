@@ -10,11 +10,14 @@ import java.util.*;
 Проход по дереву файлов
 */
 
+
 public class Solution {
-  //  private static List<File> listFile = new ArrayList<>();
+    //  private static List<File> listFile = new ArrayList<>();
+
     public static void main(String[] args) {
         File path = new File(args[0]);
         File resultFileAbsolutePath = new File(args[1]);
+
         File allFilesContent = new File(resultFileAbsolutePath.getParent() + "/allFilesContent.txt");
         FileUtils.renameFile(resultFileAbsolutePath, allFilesContent);
 
@@ -30,10 +33,10 @@ public class Solution {
                 }
             });
 
-            for (File file:listFile
-                 ) {
+            for (File file : listFile
+            ) {
                 FileInputStream fis = new FileInputStream(file);
-                while (fis.available()>0)
+                while (fis.available() > 0)
                     fos.write(fis.read());
                 fos.write(System.lineSeparator().getBytes()); // записывает с '\n'
                 fos.flush();
@@ -43,19 +46,20 @@ public class Solution {
             e.printStackTrace();
         }
     }
+
     //Рекурсивно пробегаем поддиректории и заполняем список файлов
     private static ArrayList<File> fillFileList(File path) {
         // копипаст :((
         ArrayList<File> fileList = new ArrayList<>();
         File file = new File(path.getAbsolutePath());
 
-        for(File entry: file.listFiles()){
-            if(entry.isDirectory()) {
+        for (File entry : file.listFiles()) {
+            if (entry.isDirectory()) {
                 ArrayList<File> innerFiles = fillFileList(entry);
-                for(File inner: innerFiles){
+                for (File inner : innerFiles) {
                     fileList.add(inner);
                 }
-            }else{
+            } else {
                 if (entry.length() > 50) {
                     FileUtils.deleteFile(entry);
                 } else {
@@ -65,5 +69,4 @@ public class Solution {
         }
         return fileList;
     }
-
 }
