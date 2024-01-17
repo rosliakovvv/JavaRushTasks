@@ -13,40 +13,40 @@ public class MyMultiMap<K, V> extends HashMap<K, V> implements Cloneable, Serial
         map = new HashMap<>();
     }
 
-    @Override
-    public int size() {
-        //напишите тут ваш код
-    }
+//    @Override
+//    public int size() {
+//        //напишите тут ваш код
+//    }
 
-    @Override
-    public V put(K key, V value) {
-        //напишите тут ваш код
-    }
+//    @Override
+//    public V put(K key, V value) {
+//        //напишите тут ваш код
+//    }
 
-    @Override
-    public V remove(Object key) {
-        //напишите тут ваш код
-    }
-
-    @Override
-    public Set<K> keySet() {
-        //напишите тут ваш код
-    }
-
-    @Override
-    public Collection<V> values() {
-        //напишите тут ваш код
-    }
-
-    @Override
-    public boolean containsKey(Object key) {
-        //напишите тут ваш код
-    }
-
-    @Override
-    public boolean containsValue(Object value) {
-        //напишите тут ваш код
-    }
+//    @Override
+//    public V remove(Object key) {
+//        //напишите тут ваш код
+//    }
+//
+//    @Override
+//    public Set<K> keySet() {
+//        //напишите тут ваш код
+//    }
+//
+//    @Override
+//    public Collection<V> values() {
+//        //напишите тут ваш код
+//    }
+//
+//    @Override
+//    public boolean containsKey(Object key) {
+//        //напишите тут ваш код
+//    }
+//
+//    @Override
+//    public boolean containsValue(Object value) {
+//        //напишите тут ваш код
+//    }
 
     @Override
     public String toString() {

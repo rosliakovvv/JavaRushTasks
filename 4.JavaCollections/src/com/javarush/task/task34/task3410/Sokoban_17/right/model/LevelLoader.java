@@ -1,11 +1,11 @@
 package com.javarush.task.task34.task3410.Sokoban_17.right.model;
 
-import com.javarush.task.task34.task3410.Sokoban_16.right.model.Box;
-import com.javarush.task.task34.task3410.Sokoban_16.right.model.GameObjects;
-import com.javarush.task.task34.task3410.Sokoban_16.right.model.Home;
-import com.javarush.task.task34.task3410.Sokoban_16.right.model.Model;
-import com.javarush.task.task34.task3410.Sokoban_16.right.model.Player;
-import com.javarush.task.task34.task3410.Sokoban_16.right.model.Wall;
+import com.javarush.task.task34.task3410.Sokoban_17.right.model.Box;
+import com.javarush.task.task34.task3410.Sokoban_17.right.model.GameObjects;
+import com.javarush.task.task34.task3410.Sokoban_17.right.model.Home;
+import com.javarush.task.task34.task3410.Sokoban_17.right.model.Model;
+import com.javarush.task.task34.task3410.Sokoban_17.right.model.Player;
+import com.javarush.task.task34.task3410.Sokoban_17.right.model.Wall;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -21,11 +21,11 @@ public class LevelLoader {
         this.levels = levels;
     }
 
-    public com.javarush.task.task34.task3410.Sokoban_16.right.model.GameObjects getLevel(int level) {
-        Set<com.javarush.task.task34.task3410.Sokoban_16.right.model.Wall> walls = new HashSet<>();
-        Set<com.javarush.task.task34.task3410.Sokoban_16.right.model.Box> boxes = new HashSet<>();
-        Set<com.javarush.task.task34.task3410.Sokoban_16.right.model.Home> homes = new HashSet<>();
-        com.javarush.task.task34.task3410.Sokoban_16.right.model.Player player = null;
+    public GameObjects getLevel(int level) {
+        Set<Wall> walls = new HashSet<>();
+        Set<Box> boxes = new HashSet<>();
+        Set<Home> homes = new HashSet<>();
+        Player player = null;
 
         int loopLevel;
         if (level > 60) {
@@ -68,10 +68,10 @@ public class LevelLoader {
                                     walls.add(new Wall(x, y));
                                     break;
                                 case '*':
-                                    boxes.add(new com.javarush.task.task34.task3410.Sokoban_16.right.model.Box(x, y));
+                                    boxes.add(new Box(x, y));
                                     break;
                                 case '.':
-                                    homes.add(new com.javarush.task.task34.task3410.Sokoban_16.right.model.Home(x, y));
+                                    homes.add(new Home(x, y));
                                     break;
                                 case '&':
                                     boxes.add(new Box(x, y));
@@ -80,7 +80,7 @@ public class LevelLoader {
                                 case '@':
                                     player = new Player(x, y);
                             }
-                            x += com.javarush.task.task34.task3410.Sokoban_16.right.model.Model.FIELD_CELL_SIZE;
+                            x += Model.FIELD_CELL_SIZE;
                         }
                         y += Model.FIELD_CELL_SIZE;
                     }

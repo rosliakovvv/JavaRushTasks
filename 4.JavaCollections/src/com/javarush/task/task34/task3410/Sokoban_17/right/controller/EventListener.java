@@ -1,6 +1,6 @@
 package com.javarush.task.task34.task3410.Sokoban_17.right.controller;
 
-import com.javarush.task.task34.task3410.Sokoban_16.right.model.Direction;
+import com.javarush.task.task34.task3410.Sokoban_17.right.model.Direction;
 
 public interface EventListener {
     void move(Direction direction);

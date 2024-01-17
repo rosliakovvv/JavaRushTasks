@@ -1,10 +1,10 @@
 package com.javarush.task.task34.task3410.Sokoban_17.right.controller;
 
-import com.javarush.task.task34.task3410.Sokoban_16.right.controller.EventListener;
-import com.javarush.task.task34.task3410.Sokoban_16.right.model.Direction;
-import com.javarush.task.task34.task3410.Sokoban_16.right.model.GameObjects;
-import com.javarush.task.task34.task3410.Sokoban_16.right.model.Model;
-import com.javarush.task.task34.task3410.Sokoban_16.right.view.View;
+import com.javarush.task.task34.task3410.Sokoban_17.right.controller.EventListener;
+import com.javarush.task.task34.task3410.Sokoban_17.right.model.Direction;
+import com.javarush.task.task34.task3410.Sokoban_17.right.model.GameObjects;
+import com.javarush.task.task34.task3410.Sokoban_17.right.model.Model;
+import com.javarush.task.task34.task3410.Sokoban_17.right.view.View;
 
 public class Controller implements EventListener {
     private View view;

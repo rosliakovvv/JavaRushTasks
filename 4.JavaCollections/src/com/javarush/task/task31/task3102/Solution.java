@@ -10,11 +10,13 @@ import java.util.*;
 Находим все файлы
 */
 
+
 public class Solution {
+
     public static List<String> getFileTree(String root) throws IOException {
         File originalFile = new File(root);
 
-       // File folder = originalFile.getParentFile();
+        // File folder = originalFile.getParentFile();
 
         List<String> listresult = new ArrayList<>();
         Queue<File> stats = new PriorityQueue<>();
@@ -25,16 +27,15 @@ public class Solution {
              ) {
             stats.add(file);
         }*/
-        while (!stats.isEmpty()){
+        while (!stats.isEmpty()) {
             File currentFile = stats.remove();
-            if (currentFile.isDirectory()){
+            if (currentFile.isDirectory()) {
                 Collections.addAll(stats, currentFile.listFiles());
-            }else {
+            } else {
                 listresult.add(currentFile.getAbsolutePath());
             }
         }
         return listresult;
-
     }
 
     public static void main(String[] args) {

@@ -1,8 +1,8 @@
 package com.javarush.task.task34.task3410.Sokoban_17.right.model;
 
-import com.javarush.task.task34.task3410.Sokoban_16.right.model.Direction;
-import com.javarush.task.task34.task3410.Sokoban_16.right.model.GameObject;
-import com.javarush.task.task34.task3410.Sokoban_16.right.model.Model;
+import com.javarush.task.task34.task3410.Sokoban_17.right.model.Direction;
+import com.javarush.task.task34.task3410.Sokoban_17.right.model.GameObject;
+import com.javarush.task.task34.task3410.Sokoban_17.right.model.Model;
 
 abstract public class CollisionObject extends GameObject {
     public CollisionObject(int x, int y) {

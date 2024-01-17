@@ -1,6 +1,5 @@
 package com.javarush.task.task33.task3308.for_java_rush.right;
 
-/*
 
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
@@ -49,4 +48,3 @@ public class Shop {
                 '}';
     }
 }
-*/

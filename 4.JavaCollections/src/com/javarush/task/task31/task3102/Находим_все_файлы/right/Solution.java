@@ -11,7 +11,9 @@ import java.util.List;
 Находим все файлы
 */
 
+
 public class Solution {
+
     public static List<String> getFileTree(String root) throws IOException {
         List<String> result = new ArrayList<>();
 
@@ -22,6 +24,7 @@ public class Solution {
     }
 
     private static class GetFiles extends SimpleFileVisitor<Path> {
+
         private List<String> result;
 
         public GetFiles(List<String> result) {

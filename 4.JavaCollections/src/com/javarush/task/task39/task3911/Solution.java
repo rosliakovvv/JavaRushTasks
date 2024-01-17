@@ -1,5 +1,7 @@
 package com.javarush.task.task39.task3911;
 
+import com.javarush.task.task39.task3911.for_java_rush.right.Software;
+
 import java.util.Map;
 
 /* 
@@ -9,6 +11,7 @@ Rollback
 public class Solution {
     public static void main(String[] args) {
         int n = 3;
+        Software software = new Software();
         for (int i = 1; i < 7; i++) {
             software.addNewVersion(i, "Description of version #" + i);
         }

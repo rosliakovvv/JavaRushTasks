@@ -1,6 +1,5 @@
 package com.javarush.task.task38.task3812.for_java_rush.right;
 
-/*
 import org.powermock.core.classloader.annotations.PrepareForTest;
 
 import java.lang.annotation.ElementType;
@@ -15,4 +14,4 @@ public @interface PrepareMyTest {
     Class<?>[] value() default Solution.class;
 
     String[] fullyQualifiedNames() default "";
-}*/
+}

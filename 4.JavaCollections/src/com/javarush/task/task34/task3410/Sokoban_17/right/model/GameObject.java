@@ -1,6 +1,6 @@
 package com.javarush.task.task34.task3410.Sokoban_17.right.model;
 
-import com.javarush.task.task34.task3410.Sokoban_16.right.model.Model;
+import com.javarush.task.task34.task3410.Sokoban_17.right.model.Model;
 
 import java.awt.*;
 

@@ -1,9 +1,9 @@
 package com.javarush.task.task34.task3410.Sokoban_17.right.view;
 
-import com.javarush.task.task34.task3410.Sokoban_16.right.controller.Controller;
-import com.javarush.task.task34.task3410.Sokoban_16.right.controller.EventListener;
-import com.javarush.task.task34.task3410.Sokoban_16.right.model.GameObjects;
-import com.javarush.task.task34.task3410.Sokoban_16.right.view.Field;
+import com.javarush.task.task34.task3410.Sokoban_17.right.controller.Controller;
+import com.javarush.task.task34.task3410.Sokoban_17.right.controller.EventListener;
+import com.javarush.task.task34.task3410.Sokoban_17.right.model.GameObjects;
+import com.javarush.task.task34.task3410.Sokoban_17.right.view.Field;
 
 import javax.swing.*;
 

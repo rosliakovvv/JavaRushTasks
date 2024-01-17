@@ -14,4 +14,12 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class LogParser {
+
+    public LogParser(Path path) {
+
+    }
+
+    public boolean getNumberOfUniqueIPs(Object o, Date date) {
+        return false;
+    }
 }

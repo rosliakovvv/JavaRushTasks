@@ -1,9 +1,9 @@
 package com.javarush.task.task34.task3410.Sokoban_10.right.controller;
 
-import com.javarush.task.task34.task3410.Sokoban_9.right.controller.EventListener;
-import com.javarush.task.task34.task3410.Sokoban_9.right.model.Direction;
-import com.javarush.task.task34.task3410.Sokoban_9.right.model.Model;
-import com.javarush.task.task34.task3410.Sokoban_9.right.view.View;
+import com.javarush.task.task34.task3410.Sokoban_10.right.controller.EventListener;
+import com.javarush.task.task34.task3410.Sokoban_10.right.model.Direction;
+import com.javarush.task.task34.task3410.Sokoban_10.right.model.Model;
+import com.javarush.task.task34.task3410.Sokoban_10.right.view.View;
 
 public class Controller implements EventListener {
     private View view;

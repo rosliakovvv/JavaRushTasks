@@ -1,13 +1,13 @@
 package com.javarush.task.task34.task3410.Sokoban_17.right.model;
 
-import com.javarush.task.task34.task3410.Sokoban_16.right.controller.EventListener;
-import com.javarush.task.task34.task3410.Sokoban_16.right.model.Box;
-import com.javarush.task.task34.task3410.Sokoban_16.right.model.CollisionObject;
-import com.javarush.task.task34.task3410.Sokoban_16.right.model.Direction;
-import com.javarush.task.task34.task3410.Sokoban_16.right.model.GameObjects;
-import com.javarush.task.task34.task3410.Sokoban_16.right.model.Home;
-import com.javarush.task.task34.task3410.Sokoban_16.right.model.LevelLoader;
-import com.javarush.task.task34.task3410.Sokoban_16.right.model.Wall;
+import com.javarush.task.task34.task3410.Sokoban_17.right.controller.EventListener;
+import com.javarush.task.task34.task3410.Sokoban_17.right.model.Box;
+import com.javarush.task.task34.task3410.Sokoban_17.right.model.CollisionObject;
+import com.javarush.task.task34.task3410.Sokoban_17.right.model.Direction;
+import com.javarush.task.task34.task3410.Sokoban_17.right.model.GameObjects;
+import com.javarush.task.task34.task3410.Sokoban_17.right.model.Home;
+import com.javarush.task.task34.task3410.Sokoban_17.right.model.LevelLoader;
+import com.javarush.task.task34.task3410.Sokoban_17.right.model.Wall;
 
 import java.net.URISyntaxException;
 import java.nio.file.Paths;
@@ -67,9 +67,9 @@ public class Model {
 
 
     public boolean checkBoxCollisionAndMoveIfAvailable(Direction direction) {
-        for (com.javarush.task.task34.task3410.Sokoban_16.right.model.Box box : gameObjects.getBoxes()) {
+        for (Box box : gameObjects.getBoxes()) {
             if (gameObjects.getPlayer().isCollision(box, direction)) {
-                for (com.javarush.task.task34.task3410.Sokoban_16.right.model.Box item : gameObjects.getBoxes()) {
+                for (Box item : gameObjects.getBoxes()) {
                     if (!box.equals(item)) {
                         if (box.isCollision(item, direction)) {
                             return true;
